@@ -7,7 +7,26 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/02-MyBatis-10-Util/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-07-Log/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-09-CRUD/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-08-Bind/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-06-Alias/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-05-Properties/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-03-Character/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-02-More-Mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-01-Start/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-11-ORM/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-12-Multi-Table/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-13-Dynamic-SQL/pom.xml" />
+        <option value="$PROJECT_DIR$/01_ThirdLayerApplication/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-15-PageHelper/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-14-Cache/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-16-Druid/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-17-Annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-18-Lazy/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-19-Generator/pom.xml" />
       </list>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
