@@ -3,6 +3,9 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/03-Spring-00-ThirdLayerApplication-01-Web" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -25,6 +28,10 @@
         <option value="$PROJECT_DIR$/02-MyBatis-17-Annotation/pom.xml" />
         <option value="$PROJECT_DIR$/02-MyBatis-18-Lazy/pom.xml" />
         <option value="$PROJECT_DIR$/02-MyBatis-19-Generator/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-00-ThirdLayerApplication-01-Web/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-01-Start/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-02-Bean-Name/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-03-Create/pom.xml" />
       </list>
     </option>
   </component>

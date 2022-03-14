@@ -38,9 +38,10 @@
 
     <!--指定Mapper.xml的路径位置-->
     <mappers>
-        <mapper resource="com/fc/mapper/EmployeeMapper.xml"/>
+
         <mapper resource="com/fc/mapper/DepartmentMapper.xml"/>
         <mapper resource="com/fc/mapper/StudentMapper.xml"/>
         <mapper resource="com/fc/mapper/TAccountMapper.xml"/>
+        <mapper resource="com/fc/mapper/UserMapper.xml"/>
     </mappers>
 </configuration>

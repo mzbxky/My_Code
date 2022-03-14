@@ -7,16 +7,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="02-MyBatis-08-Bind" />
+        <module name="03-Spring-00-ThirdLayerApplication-01-Web" />
         <module name="02-MyBatis-05-Properties" />
         <module name="01_ThirdLayerApplication" />
+        <module name="03-Spring-01-Start" />
         <module name="02-MyBatis-15-PageHelper" />
         <module name="02-MyBatis-10-Util" />
         <module name="02-MyBatis-06-Alias" />
+        <module name="03-Spring-03-Create" />
         <module name="02-MyBatis-09-CRUD" />
         <module name="02-MyBatis-13-Dynamic-SQL" />
         <module name="02-MyBatis-17-Annotation" />
         <module name="02-MyBatis-02-More-Mapper" />
         <module name="02-MyBatis-16-Druid" />
+        <module name="03-Spring-02-Bean-Name" />
         <module name="02-MyBatis-19-Generator" />
         <module name="02-MyBatis-14-Cache" />
         <module name="02-MyBatis-03-Character" />
@@ -47,6 +51,10 @@
       <module name="02-MyBatis-17-Annotation" target="1.8" />
       <module name="02-MyBatis-18-Lazy" target="1.8" />
       <module name="02-MyBatis-19-Generator" target="1.8" />
+      <module name="03-Spring-00-ThirdLayerApplication-01-Web" target="1.8" />
+      <module name="03-Spring-01-Start" target="1.8" />
+      <module name="03-Spring-02-Bean-Name" target="1.8" />
+      <module name="03-Spring-03-Create" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
