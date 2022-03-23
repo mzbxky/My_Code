@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="_01ThirdLayerApplicationWeb:war">
+    <output-path>$PROJECT_DIR$/_01ThirdLayerApplicationWeb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>_01ThirdLayerApplicationWeb</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="_01ThirdLayerApplicationWeb-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="_01ThirdLayerApplicationWeb:war exploded" />
+    </root>
+  </artifact>
+</component>

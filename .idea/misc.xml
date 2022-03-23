@@ -5,6 +5,10 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/03-Spring-00-ThirdLayerApplication-01-Web" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-01-Start" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-02-RequestMapping" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-03-Param" />
+    <file type="web" url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -32,6 +36,29 @@
         <option value="$PROJECT_DIR$/03-Spring-01-Start/pom.xml" />
         <option value="$PROJECT_DIR$/03-Spring-02-Bean-Name/pom.xml" />
         <option value="$PROJECT_DIR$/03-Spring-03-Create/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-04-Scope/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-05-Lifecycle/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-06-Lazy/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-07-DI-01-Constructor/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-07-DI-02-Set/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-07-DI-03-ComplexType/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-07-DI-04-Annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-07-DI-05-Annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-08-JDBC-01-XML/pom.xml" />
+        <option value="$PROJECT_DIR$/_01ThirdLayerApplicationWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-08-JDBC-02-Annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/04-DesignPattern-01-Proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/03-DesignPattern-09-AOP-00-Start/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-09-AOP-00-Start/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-09-AOP-01-XML-Start/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-09-AOP-02-Annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-10-Thransaction-01-Programming/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-10-Thransaction-02-XML/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-10-Transaction-03-Annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/03-Spring-10-Transaction-04-Propagate/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-01-Start/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-02-RequestMapping/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-03-Param/pom.xml" />
       </list>
     </option>
   </component>

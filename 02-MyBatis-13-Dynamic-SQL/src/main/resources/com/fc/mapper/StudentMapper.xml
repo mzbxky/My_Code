@@ -11,9 +11,15 @@
 <!--    <sql id="field">-->
 <!--        id,name,age,gender,birthday,info-->
 <!--    </sql>-->
+<!--    <sql id="field">-->
+<!--        id,name,age,gender,info-->
+<!--    </sql>-->
+
     <sql id="field">
         id,name,age,gender,info
     </sql>
+
+
 
 <!--    <select id="findAll" resultType="com.fc.entity.Student">-->
 <!--        select <include refid="field"/>-->
@@ -52,46 +58,69 @@
 <!--            and info like #{info}-->
 <!--        </if>-->
 <!--    </select>-->
+
+<!--    <select id="findByKeyword" resultType="com.fc.entity.Student">-->
+<!--        select <include refid="field"/>-->
+<!--        from student-->
+<!--        where 1=1-->
+<!--        <if test="name!= null">-->
+<!--            and name like #{name}-->
+<!--        </if>-->
+<!--        <if test="info!=null">-->
+<!--            and info like #{info}-->
+<!--        </if>-->
+<!--    </select>-->
     <select id="findByKeyword" resultType="com.fc.entity.Student">
         select <include refid="field"/>
         from student
         where 1=1
-        <if test="name!= null">
+        <if test="name!=null">
             and name like #{name}
         </if>
-        <if test="info!=null">
+        <if test="info != null">
             and info like #{info}
         </if>
+
     </select>
 
     <!--where标签能够自动去除多余的and和or-->
+<!--    <select id="findByStudent" resultType="com.fc.entity.Student">-->
+<!--        select <include refid="field"/>-->
+<!--        from student-->
+<!--        <where>-->
+<!--            <if test="id != null">-->
+<!--                or id = #{id}-->
+<!--            </if>-->
+
+<!--            <if test="name != null">-->
+<!--                or name = #{name}-->
+<!--            </if>-->
+
+<!--            <if test="age != null">-->
+<!--                or age = #{age}-->
+<!--            </if>-->
+
+<!--            <if test="gender != null">-->
+<!--                or gender = #{gender}-->
+<!--            </if>-->
+
+
+<!--            <if test="info != null">-->
+<!--                or info = #{info}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
     <select id="findByStudent" resultType="com.fc.entity.Student">
         select <include refid="field"/>
         from student
         <where>
-            <if test="id != null">
-                or id = #{id}
-            </if>
-
-            <if test="name != null">
+            <if test="name!=null">
                 or name = #{name}
             </if>
 
-            <if test="age != null">
-                or age = #{age}
-            </if>
-
-            <if test="gender != null">
-                or gender = #{gender}
-            </if>
-
-
-            <if test="info != null">
-                or info = #{info}
-            </if>
         </where>
     </select>
-
     <!--trim可以声明指定的前后缀以及忽略指定的前后缀-->
     <select id="findByStudentOnTrim" resultType="com.fc.entity.Student">
         select <include refid="field"/>

@@ -54,9 +54,27 @@
 <!--            <result property="name" column="emp_name"/>-->
 <!--        </association>-->
 <!--    </resultMap>-->
+<!--    <resultMap id="employeeMap" type="com.fc.entity.Employee">-->
+<!--        <id property="id" column="emp_id"/>-->
+<!--        <result property="name" column="emp_name"/>-->
+<!--        <association property="department" javaType="com.fc.entity.Department">-->
+<!--            <id column="dept_id" property="id"/>-->
+<!--            <result column="dept_name" property="name"/>-->
+<!--        </association>-->
+<!--    </resultMap>-->
+
+<!--    <resultMap id="employeeMap" type="com.fc.entity.Employee">-->
+<!--        <id column="emp_id" property="id"/>-->
+<!--        <result column="emp_name" property="name"/>-->
+<!--        <association property="department" javaType="com.fc.entity.Department">-->
+<!--            <id column="dept_id" property="id"/>-->
+<!--            <result column="dept_name" property="name"/>-->
+<!--        </association>-->
+<!--    </resultMap>-->
+
     <resultMap id="employeeMap" type="com.fc.entity.Employee">
-        <id property="id" column="emp_id"/>
-        <result property="name" column="emp_name"/>
+        <id column="emp_id" property="id"/>
+        <result column="emp_name" property="name"/>
         <association property="department" javaType="com.fc.entity.Department">
             <id column="dept_id" property="id"/>
             <result column="dept_name" property="name"/>
@@ -77,10 +95,20 @@
 <!--        inner join department d-->
 <!--        on e.dept_id = e.dept_id-->
 <!--    </select>-->
+<!--    <select id="findAll" resultMap="employeeMap">-->
+<!--        select * from employee e-->
+<!--        inner join department d-->
+<!--        on e.dept_id = d.dept_id-->
+
+<!--    </select>-->
+<!--    <select id="findAll" resultMap="employeeMap">-->
+<!--        select * from employeeMap e-->
+<!--        inner join department d-->
+<!--        on e.dept_id = d.dept_id-->
+<!--    </select>-->
     <select id="findAll" resultMap="employeeMap">
         select * from employee e
         inner join department d
         on e.dept_id = d.dept_id
-
     </select>
 </mapper>

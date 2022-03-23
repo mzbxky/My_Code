@@ -14,8 +14,13 @@ public class BeanTest {
 //        Student student = (Student) applicationContext.getBean("student5");
 //
 //        System.out.println(student);
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+//        Student student = (Student) applicationContext.getBean("student5");
+//        System.out.println(student);
+        //获取容器
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        Student student = (Student) applicationContext.getBean("student5");
+        Student student = (Student) applicationContext.getBean("student2");
+        student.setAge((byte) 6);
         System.out.println(student);
     }
 }

@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="_01ThirdLayerApplicationWeb:war exploded">
+    <output-path>$PROJECT_DIR$/_01ThirdLayerApplicationWeb/target/_01ThirdLayerApplicationWeb-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>_01ThirdLayerApplicationWeb</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="_01ThirdLayerApplicationWeb" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.49" />
+          <element id="library" level="project" name="Maven: com.alibaba:druid:1.2.8" />
+          <element id="library" level="project" name="Maven: commons-dbutils:commons-dbutils:1.7" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.3.1" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/_01ThirdLayerApplicationWeb/target/_01ThirdLayerApplicationWeb-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="_01ThirdLayerApplicationWeb/web/Web" />
+    </root>
+  </artifact>
+</component>
