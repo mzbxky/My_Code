@@ -70,6 +70,19 @@
 <!--            and info like #{info}-->
 <!--        </if>-->
 <!--    </select>-->
+<!--    <select id="findByKeyword" resultType="com.fc.entity.Student">-->
+<!--        select <include refid="field"/>-->
+<!--        from student-->
+<!--        where 1=1-->
+<!--        <if test="name!=null">-->
+<!--            and name like #{name}-->
+<!--        </if>-->
+<!--        <if test="info != null">-->
+<!--            and info like #{info}-->
+<!--        </if>-->
+
+<!--    </select>-->
+
     <select id="findByKeyword" resultType="com.fc.entity.Student">
         select <include refid="field"/>
         from student
@@ -80,7 +93,6 @@
         <if test="info != null">
             and info like #{info}
         </if>
-
     </select>
 
     <!--where标签能够自动去除多余的and和or-->
@@ -195,11 +207,17 @@
         </trim>
         where id = #{id}
     </update>
-
+<!--collection数组类型，separator用，分割，open开始，close结束-->
     <delete id="deleteMore">
         delete from student where id in
         <foreach collection="array" separator="," open="(" close=")" index="i" item="id">
             #{id}
         </foreach>
     </delete>
+<!--    <delete id="deleteMore">-->
+<!--        delete from student where id in-->
+<!--        <foreach collection="array" separator="," open="(" close=")" index="i" item="id">-->
+<!--            #{id}-->
+<!--        </foreach>-->
+<!--    </delete>-->
 </mapper>

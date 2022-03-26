@@ -8,6 +8,16 @@
     <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-01-Start" />
     <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-02-RequestMapping" />
     <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-03-Param" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-04-Encoding" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-05-Date" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-06-ViewResolver" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-07-ResponseData" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-08-OtherAnnotation" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-09-Ajax" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-10-FileUpload" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-11-FileDownload" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-12-Exception" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-13-ControllerAdvice" />
     <file type="web" url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb" />
   </component>
   <component name="MavenProjectsManager">
@@ -59,6 +69,18 @@
         <option value="$PROJECT_DIR$/05-SpringMVC-01-Start/pom.xml" />
         <option value="$PROJECT_DIR$/05-SpringMVC-02-RequestMapping/pom.xml" />
         <option value="$PROJECT_DIR$/05-SpringMVC-03-Param/pom.xml" />
+        <option value="$PROJECT_DIR$/../devo1/observer/pom.xml" />
+        <option value="$PROJECT_DIR$/../devo1/observer1/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-04-Encoding/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-05-Date/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-06-ViewResolver/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-07-ResponseData/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-08-OtherAnnotation/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-09-Ajax/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-10-FileUpload/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-11-FileDownload/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-12-Exception/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-13-ControllerAdvice/pom.xml" />
       </list>
     </option>
   </component>

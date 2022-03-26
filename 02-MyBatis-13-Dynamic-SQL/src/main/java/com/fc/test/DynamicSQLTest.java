@@ -8,14 +8,22 @@ import org.junit.Test;
 import java.util.List;
 
 public class DynamicSQLTest {
+//    @Test
+//    public void testDeleteMore() {
+//        StudentDao studentDao = MyBatisUtil.getMapper(StudentDao.class);
+//
+//        int affectedRows = studentDao.deleteMore(5, 3, 17, 16);
+//
+//        System.out.println(affectedRows);
+//
+//        MyBatisUtil.commit();
+//    }
     @Test
-    public void testDeleteMore() {
+    public void testDeleteMore(){
         StudentDao studentDao = MyBatisUtil.getMapper(StudentDao.class);
 
-        int affectedRows = studentDao.deleteMore(5, 3, 17, 16);
-
+        int affectedRows = studentDao.deleteMore(1,2,3);
         System.out.println(affectedRows);
-
         MyBatisUtil.commit();
     }
 
