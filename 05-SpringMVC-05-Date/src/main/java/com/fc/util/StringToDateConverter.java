@@ -11,19 +11,62 @@ public class StringToDateConverter implements Converter<String, Date> {
     public Date convert(String source) {
         //这是SpringMvc支持的格式
         String pattern = "yyyy/mm/dd";
-        //如果请求字符串中携带了-
-        if (source.contains("-")){
+        //如果请求字符串携带了-
+        if(source.contains("-")){
             pattern = "yyyy-mm-dd";
         }
-        //声明一个日期格式化器
+        //声明一个格式化器
         SimpleDateFormat format = new SimpleDateFormat(pattern);
         Date parse = null;
         //字符串转为对应的日期对象
         try {
             parse = format.parse(source);
         } catch (ParseException e) {
-
+            e.printStackTrace();
         }
-        return parse;
+        return null;
     }
+
+
+//    @Override
+//    public Date convert(String source) {
+//        //这是SpringMvc支持的格式
+//        String pattern = "yyyy/mm/dd";
+//        //如果请求字符串携带了-
+//        if(source.contains("-")){
+//            pattern = "yyyy-mm-dd";
+//        }
+//        //声明一个格式化器
+//        SimpleDateFormat format = new SimpleDateFormat(pattern);
+//        Date parse = null;
+//        //字符串转为对应的日期对象
+//        try {
+//            parse = format.parse(source);
+//
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+//        return parse;
+//    }
+
+
+//    @Override
+//    public Date convert(String source) {
+//        //这是SpringMvc支持的格式
+//        String pattern = "yyyy/mm/dd";
+//        //如果请求字符串中携带了-
+//        if (source.contains("-")){
+//            pattern = "yyyy-mm-dd";
+//        }
+//        //声明一个日期格式化器
+//        SimpleDateFormat format = new SimpleDateFormat(pattern);
+//        Date parse = null;
+//        //字符串转为对应的日期对象
+//        try {
+//            parse = format.parse(source);
+//        } catch (ParseException e) {
+//
+//        }
+//        return parse;
+//    }
 }

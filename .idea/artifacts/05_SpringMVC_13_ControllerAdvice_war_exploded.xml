@@ -14,6 +14,7 @@
           <element id="module-output" name="05-SpringMVC-13-ControllerAdvice" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.20" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.6" />

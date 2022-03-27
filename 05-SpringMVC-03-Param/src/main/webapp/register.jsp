@@ -5,7 +5,7 @@
     <title>注册</title>
 </head>
 <body>
-<form method="get" action="/user/getListAndMap">
+<form method="get" action="/user/getNestedBean">
     <table align="center">
         <caption><h1>注册</h1></caption>
 
@@ -32,7 +32,7 @@
         <tr>
             <td>性别</td>
             <td>
-                男 <input type="radio" name="user.gender" value="男">
+                男 <input type="radio" name="gender" value="男">
                 女 <input checked type="radio" name="user.gender" value="女">
             </td>
         </tr>

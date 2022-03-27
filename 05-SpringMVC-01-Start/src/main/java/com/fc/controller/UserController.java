@@ -3,8 +3,10 @@ package com.fc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+//@Controller
 @Controller
 //用于声明请求的映射url请求路径,也能加/，可以不加
+//@RequestMapping("user")
 @RequestMapping("user")
 public class UserController {
     @RequestMapping("login")

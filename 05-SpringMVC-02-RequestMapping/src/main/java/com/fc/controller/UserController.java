@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
     @RequestMapping("getParam")
     public void getParam(String username,String password){
+
         System.out.println("用户名：" + username + " 密码：" + password);
     }
 }
