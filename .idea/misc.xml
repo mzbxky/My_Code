@@ -18,7 +18,12 @@
     <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-11-FileDownload" />
     <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-12-Exception" />
     <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-13-ControllerAdvice" />
+    <file type="web" url="file://$PROJECT_DIR$/05-SpringMVC-14-Interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/06-SSM-01-Wyy" />
+    <file type="web" url="file://$PROJECT_DIR$/06-SSM-01-Wyy-02" />
+    <file type="web" url="file://$PROJECT_DIR$/06-SSM-02-poor" />
     <file type="web" url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb" />
+    <file type="web" url="file://$PROJECT_DIR$/aa" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -81,6 +86,12 @@
         <option value="$PROJECT_DIR$/05-SpringMVC-11-FileDownload/pom.xml" />
         <option value="$PROJECT_DIR$/05-SpringMVC-12-Exception/pom.xml" />
         <option value="$PROJECT_DIR$/05-SpringMVC-13-ControllerAdvice/pom.xml" />
+        <option value="$PROJECT_DIR$/05-SpringMVC-14-Interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/06-SSM-01_wyy/pom.xml" />
+        <option value="$PROJECT_DIR$/06-SSM-01-Wyy/pom.xml" />
+        <option value="$PROJECT_DIR$/06-SSM-01-02-Wyy/pom.xml" />
+        <option value="$PROJECT_DIR$/06-SSM-01-Wyy-02/pom.xml" />
+        <option value="$PROJECT_DIR$/06-SSM-02-poor/pom.xml" />
       </list>
     </option>
   </component>

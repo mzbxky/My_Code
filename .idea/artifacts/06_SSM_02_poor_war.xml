@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="06-SSM-02-poor:war">
+    <output-path>$PROJECT_DIR$/06-SSM-02-poor/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>06-SSM-02-poor</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="_06-SSM-02-poor-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="06-SSM-02-poor:war exploded" />
+    </root>
+  </artifact>
+</component>
