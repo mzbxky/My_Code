@@ -2,14 +2,14 @@ package com.fc.service;
 
 import com.fc.entity.User;
 
-import java.util.List;
+import java.util.Map;
 
 public interface UserService {
-    Integer delete(Long id);
+    Map<String,Object> delete(Long id);
 
-    Integer updateUser(User user);
+    Map<String,Object> updateUser(User user);
 
-    Integer addUser(User user);
+    Map<String,Object> addUser(User user);
 
-    List<User> findAll(Integer pageNum,Integer pageSize);
+    Map<String,Object> findAll(Integer pageNo,Integer pageSize);
 }

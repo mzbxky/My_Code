@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/01_ThirdLayerApplication/01_ThirdLayerApplication.iml" filepath="$PROJECT_DIR$/01_ThirdLayerApplication/01_ThirdLayerApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/02-MyBatis-01-Start/02-MyBatis-01-Start.iml" filepath="$PROJECT_DIR$/02-MyBatis-01-Start/02-MyBatis-01-Start.iml" />
       <module fileurl="file://$PROJECT_DIR$/02-MyBatis-02-More-Mapper/02-MyBatis-02-More-Mapper.iml" filepath="$PROJECT_DIR$/02-MyBatis-02-More-Mapper/02-MyBatis-02-More-Mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/02-MyBatis-03-Character/02-MyBatis-03-Character.iml" filepath="$PROJECT_DIR$/02-MyBatis-03-Character/02-MyBatis-03-Character.iml" />
