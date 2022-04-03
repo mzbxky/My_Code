@@ -32,7 +32,7 @@ private CarouselMapper carouselMapper;
         map.put("message","用户获取成功");
         map.put("code",200);
         map.put("success",true);
-        map.put("data:",pageInfo.getList());
+        map.put("data:",pageInfo);
         return map;
 
 

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.Map;
 
 @RestController
@@ -29,5 +30,9 @@ public class AlleviationController {
     @RequestMapping("del")
     public Map<String,Object> delete(Long id){
         return alleviationService.delete(id);
+    }
+    @RequestMapping("click")
+    public Map<String,Object> click(Date lastClickTime, Long id ){
+        return alleviationService.click(lastClickTime,id);
     }
 }
