@@ -2,25 +2,31 @@ package com.fc.controller;
 
 import com.fc.entity.MessageBoardWithBLOBs;
 import com.fc.service.MessageBoardService;
+import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
-
-@RequestMapping("comment")
+@RequestMapping("/comment")
+@RestController
 public class MessageBoardController {
     @Autowired
     private MessageBoardService messageBoardService;
-    @RequestMapping("list")
-    public Map<String,Object> findAll(Integer pageNo,Integer pageSize){
-        return messageBoardService.findAll(pageNo,pageSize);
+    @GetMapping("/list")
+    public ResultVo findAll(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
+                            @RequestParam(value = "pageSize",defaultValue = "1") Integer pageSize,
+                            Long id){
+        return messageBoardService.findAll(pageNo,pageSize,id);
     }
-    @RequestMapping("add")
-    public Map<String,Object> add(MessageBoardWithBLOBs messageBoard){
+    @PostMapping("add")
+    public ResultVo add(@RequestBody MessageBoardWithBLOBs messageBoard){
         return messageBoardService.add(messageBoard);
     }
-    @RequestMapping("del")
-    public Map<String,Object> delete(Long id){
+    @GetMapping("del")
+    public ResultVo delete(Long id){
         return messageBoardService.delete(id);
+    }
+    @PostMapping("reply")
+    public ResultVo reply(@RequestBody MessageBoardWithBLOBs messageBoard){
+        return messageBoardService.reply(messageBoard);
     }
 }

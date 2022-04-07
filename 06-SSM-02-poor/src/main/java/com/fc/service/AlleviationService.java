@@ -1,18 +1,18 @@
 package com.fc.service;
 
 import com.fc.entity.Alleviation;
+import com.fc.vo.ResultVo;
 
 import java.util.Date;
-import java.util.Map;
 
 public interface AlleviationService {
-    Map<String,Object> findAll(Integer pageNo,Integer pageSize);
+    ResultVo findAll(Integer pageNo, Integer pageSize,Long id);
 
-    Map<String, Object> add(Alleviation alleviation);
+    ResultVo add(Alleviation alleviation);
 
-    Map<String, Object> update(Alleviation alleviation);
+    ResultVo update(Alleviation alleviation);
 
-    Map<String, Object> delete(Long id);
+    ResultVo delete(Long id);
 
-    Map<String,Object> click(Date lastClickTime, Long id);
+    ResultVo click(Date lastClickTime, Long id);
 }

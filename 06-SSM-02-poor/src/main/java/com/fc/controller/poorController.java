@@ -2,36 +2,37 @@ package com.fc.controller;
 
 import com.fc.entity.PoorWithBLOBs;
 import com.fc.service.PoorService;
+import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
-import java.util.Map;
 //
 @RestController
 @RequestMapping("poor")
 public class poorController {
     @Autowired
 private PoorService poorService;
-    @RequestMapping("list")
-    public Map<String ,Object> findAll(Integer pageNo, Integer pageSize){
-        return poorService.findAll(pageNo,pageSize);
+    @GetMapping("list")
+    public ResultVo findAll(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
+                            @RequestParam(value = "pageSize",defaultValue = "3") Integer pageSize,
+                            Long id){
+        return poorService.findAll(pageNo,pageSize,id);
     }
-    @RequestMapping("add")
-    public Map<String,Object> add(PoorWithBLOBs poor){
+    @PostMapping("add")
+    public ResultVo add(@RequestBody PoorWithBLOBs poor){
         return poorService.add(poor);
     }
-    @RequestMapping("update")
-    public Map<String,Object> update(PoorWithBLOBs poor){
+    @PostMapping("update")
+    public ResultVo update(@RequestBody PoorWithBLOBs poor){
         return poorService.update(poor);
     }
-    @RequestMapping("del")
-    public Map<String ,Object> delete(Long id){
+    @GetMapping("del")
+    public ResultVo delete(Long id){
         return poorService.delete(id);
     }
-    @RequestMapping("click")
-    public Map<String,Object> click(Long id, Date lastClickTime){
+    @PostMapping("click")
+    public ResultVo click(Long id, Date lastClickTime){
         return poorService.click(id,lastClickTime);
     }
 }

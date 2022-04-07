@@ -3,105 +3,90 @@ package com.fc.service.impl;
 import com.fc.dao.CarouselMapper;
 import com.fc.entity.Carousel;
 import com.fc.service.CarouselService;
+import com.fc.vo.DataVo;
+import com.fc.vo.ResultVo;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class CarouselServiceImpl implements CarouselService {
 @Autowired
 private CarouselMapper carouselMapper;
     @Override
-    public Map<String,Object> findAll(Integer pageNo,Integer pageSize) {
-        PageHelper.startPage(pageNo,pageSize);
-        List<Carousel> list = carouselMapper.selectByExample(null);
-        PageInfo<Carousel> pageInfo = new PageInfo<>(list);
-        Map<String,Object> map = new HashMap<>();
-        if (pageInfo.getList() == null){
-            map.put("message","用户获取失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
-            return map;
+    public ResultVo findAll(Integer pageNo, Integer pageSize,Integer id) {
+        List<Carousel> carousels;
+        ResultVo resultVo;
+        try {
+            if(id == null){
+                PageHelper.startPage(pageNo,pageSize);
+                carousels = carouselMapper.selectByExample(null);
+
+            }else {
+                Carousel carousel = carouselMapper.selectByPrimaryKey(id);
+                carousels = new ArrayList<>();
+                carousels.add(carousel);
+            }
+            PageInfo<Carousel> pageInfo = new PageInfo<>(carousels);
+            DataVo<Carousel> dataVo = new DataVo<>(pageInfo.getTotal(),carousels,pageNo,pageSize);
+            resultVo = new ResultVo(200,"查询成功",true,dataVo);
+        }catch (Exception e){
+            resultVo = new ResultVo(-1,"查询失败",false,null);
         }
-        map.put("message","用户获取成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data:",pageInfo);
-        return map;
+       return resultVo;
 
 
     }
 
     @Override
-    public Map<String,Object> delete(Integer id) {
-        Map<String , Object> map = new HashMap<>();
-        if (carouselMapper.deleteByPrimaryKey(id) != 1){
-            map.put("message","用户删除失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
+    public ResultVo delete(Integer id) {
+        ResultVo resultVo;
+        int affectedRows = carouselMapper.deleteByPrimaryKey(id);
+        if(affectedRows >0){
+            resultVo = new ResultVo(200,"删除成功",true,null);
+        }else {
+            resultVo = new ResultVo(-1,"删除失败",false,null);
         }
-        map.put("message","用户删除成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data","{}");
-        return map;
-
+        return resultVo;
     }
 
     @Override
-    public Map<String, Object> add(Carousel carousel) {
-        Map<String , Object> map = new HashMap<>();
-        if (carouselMapper.insert(carousel) != 1){
-            map.put("message","用户添加失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
+    public ResultVo add(Carousel carousel) {
+        int affectedRows = carouselMapper.insertSelective(carousel);
+        ResultVo resultVo;
+        if(affectedRows>0){
+            resultVo = new ResultVo(200,"添加成功",true,carousel);
+        }else {
+            resultVo = new ResultVo(-1,"添加失败",false,null);
         }
-        map.put("message","用户添加成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data","{}");
-        return map;
-
+        return resultVo;
     }
 
     @Override
-    public Map<String, Object> update(Carousel carousel) {
-        Map<String , Object> map = new HashMap<>();
-        if (carouselMapper.updateByPrimaryKey(carousel) != 1){
-            map.put("message","用户添加失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
+    public ResultVo update(Carousel carousel) {
+        ResultVo resultVo;
+        int affectedRows = carouselMapper.updateByPrimaryKeySelective(carousel);
+        if(affectedRows>0){
+            Carousel result = carouselMapper.selectByPrimaryKey(carousel.getId());
+            resultVo = new ResultVo(200,"轮播图修改成功",true,carousel);
+        }else {
+            resultVo = new ResultVo(-1,"修改失败",false,null);
         }
-        map.put("message","用户添加成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data","{}");
-        return map;
-
+        return resultVo;
     }
 
     @Override
-    public Map<String, Object> state(Integer id) {
-        Map<String , Object> map = new HashMap<>();
-        if(!carouselMapper.setState(id)){
-            map.put("message","设置失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
-        }
-        map.put("message","设置成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data","{}");
-        return map;
+    public ResultVo state(Long id) {
+       ResultVo resultVo;
+       if(carouselMapper.setState(id)){
+           resultVo = new ResultVo(200,"轮播图设置成功",true,null);
+       }else {
+           resultVo = new ResultVo(-1,"轮播图设置失败",false,null);
+       }
+       return resultVo;
     }
 }

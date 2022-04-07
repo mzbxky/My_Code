@@ -3,70 +3,69 @@ package com.fc.service.impl;
 import com.fc.dao.CollectionMapper;
 import com.fc.entity.Collection;
 import com.fc.service.CollectionService;
+import com.fc.vo.DataVo;
+import com.fc.vo.ResultVo;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class CollectionImpl implements CollectionService {
     @Autowired
 private CollectionMapper collectionMapper;
     @Override
-    public Map<String,Object> findAll(Integer pageNo, Integer pageSize) {
+    public ResultVo findAll(Integer pageNo, Integer pageSize,Long id) {
+        List<Collection> collections;
+        ResultVo resultVo = new ResultVo();
+        try {
+            if (id == null){
+                PageHelper.startPage(pageNo,pageSize);
+                collections = collectionMapper.selectByExample(null);
+            }else {
+                Collection collection = collectionMapper.selectByPrimaryKey(id);
+                collections = new ArrayList<>();
+                collections.add(collection);
+            }
+            PageInfo<Collection> pageInfo = new PageInfo<>(collections);
 
-         PageHelper.startPage(pageNo,pageSize);
-        List<Collection> list = collectionMapper.selectByExample(null);
-        PageInfo<Collection> pageInfo = new PageInfo<>(list);
-        Map<String,Object> map = new HashMap<>();
-        if (pageInfo.getList() == null){
-            map.put("message","用户获取失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
-            return map;
+            DataVo<Collection> dataVo = new DataVo<>(pageInfo.getTotal(),collections,pageNo,pageSize);
+
+            resultVo = new ResultVo(200,"查询成功",true,dataVo);
+        }catch (Exception e){
+            resultVo = new ResultVo(-1,"查询失败",false,null);
         }
-        map.put("message","用户获取成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data:",pageInfo);
-        return map;
+
+
+        return resultVo;
     }
 
     @Override
-    public Map<String, Object> delete(Long id) {
-        Map<String , Object> map = new HashMap<>();
-        if (collectionMapper.deleteByPrimaryKey(id) != 1){
-            map.put("message","用户删除失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
-        }
-        map.put("message","用户删除成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data","{}");
-        return map;
-
+    public ResultVo delete(Long id) {
+        ResultVo resultVo = new ResultVo();
+       int affectedRows = collectionMapper.deleteByPrimaryKey(id);
+       if(affectedRows>0){
+           resultVo = new ResultVo(200,"删除成功",true,null);
+       }else {
+           resultVo = new ResultVo(-1,"删除失败",false,null);
+       }
+        return resultVo;
     }
 
     @Override
-    public Map<String, Object> add(Collection collection) {
-        Map<String,Object> map = new HashMap<>();
-        if (collectionMapper.insert(collection) != 1){
-            map.put("message","用户添加失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
+    public ResultVo add(Collection collection) {
+        if(collection.getCreateTime()==null){
+            collection.setCreateTime(new Date());
         }
-        map.put("message","用户添加成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data","{}");
-        return map;
+        ResultVo resultVo;
+        int affectedRows = collectionMapper.insertSelective(collection);
+        if(affectedRows>0){
+            resultVo = new ResultVo(200,"添加成功",true,collection);
+        }else {
+            resultVo = new ResultVo(-1,"添加失败",false,null);
+        }
+        return resultVo;
     }
 }

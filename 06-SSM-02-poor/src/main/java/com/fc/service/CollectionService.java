@@ -1,14 +1,13 @@
 package com.fc.service;
 
 import com.fc.entity.Collection;
-
-import java.util.Map;
+import com.fc.vo.ResultVo;
 
 public interface CollectionService {
 
-    Map<String,Object> findAll(Integer pageNo, Integer pageSize);
+    ResultVo findAll(Integer pageNo, Integer pageSize,Long id);
 
-    Map<String,Object> delete(Long id);
+    ResultVo delete(Long id);
 
-    Map<String,Object> add(Collection collection);
+    ResultVo add(Collection collection);
 }

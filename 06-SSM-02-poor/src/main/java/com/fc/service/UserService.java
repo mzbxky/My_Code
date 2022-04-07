@@ -1,15 +1,14 @@
 package com.fc.service;
 
 import com.fc.entity.User;
-
-import java.util.Map;
+import com.fc.vo.ResultVo;
 
 public interface UserService {
-    Map<String,Object> delete(Long id);
+    ResultVo delete(Long id);
 
-    Map<String,Object> updateUser(User user);
+    ResultVo updateUser(User user);
 
-    Map<String,Object> addUser(User user);
+    ResultVo addUser(User user);
 
-    Map<String,Object> findAll(Integer pageNo,Integer pageSize);
+    ResultVo findAll(Integer pageNo, Integer pageSize,Long id);
 }

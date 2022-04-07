@@ -1,13 +1,14 @@
 package com.fc.service;
 
 import com.fc.entity.MessageBoardWithBLOBs;
-
-import java.util.Map;
+import com.fc.vo.ResultVo;
 
 public interface MessageBoardService {
-    Map<String,Object> findAll(Integer pageNo, Integer pageSize);
+    ResultVo findAll(Integer pageNo, Integer pageSize,Long id);
 
-    Map<String, Object> add(MessageBoardWithBLOBs messageBoard);
+    ResultVo add(MessageBoardWithBLOBs messageBoard);
 
-    Map<String, Object> delete(Long id);
+    ResultVo delete(Long id);
+
+    ResultVo reply(MessageBoardWithBLOBs messageBoard);
 }

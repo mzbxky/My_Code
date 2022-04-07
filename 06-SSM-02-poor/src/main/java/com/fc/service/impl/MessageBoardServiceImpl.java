@@ -4,70 +4,80 @@ import com.fc.dao.MessageBoardMapper;
 import com.fc.entity.MessageBoard;
 import com.fc.entity.MessageBoardWithBLOBs;
 import com.fc.service.MessageBoardService;
+import com.fc.vo.DataVo;
+import com.fc.vo.ResultVo;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
 @Service
 public class MessageBoardServiceImpl implements MessageBoardService {
     @Autowired
     private MessageBoardMapper messageBoardMapper;
     @Override
-    public Map<String, Object> findAll(Integer pageNo, Integer pageSize) {
-        PageHelper.startPage(pageNo,pageSize);
-        List<MessageBoard> list = messageBoardMapper.selectByExample(null);
-        PageInfo<MessageBoard> pageInfo = new PageInfo<>(list);
-        Map<String,Object> map = new HashMap<>();
-        if (pageInfo.getList() == null){
-            map.put("message","留言获取失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
-            return map;
+    public ResultVo findAll(Integer pageNo, Integer pageSize,Long id) {
+        List<MessageBoard> messageBoards;
+        ResultVo resultVo = new ResultVo();
+        try {
+            if (id == null){
+                PageHelper.startPage(pageNo,pageSize);
+                messageBoards = messageBoardMapper.selectByExample(null);
+            }else {
+                MessageBoard messageBoard = messageBoardMapper.selectByPrimaryKey(id);
+                messageBoards = new ArrayList<>();
+                messageBoards.add(messageBoard);
+            }
+            PageInfo<MessageBoard> pageInfo = new PageInfo<>(messageBoards);
+
+            DataVo<MessageBoard> dataVo = new DataVo<>(pageInfo.getTotal(),messageBoards,pageNo,pageSize);
+
+            resultVo = new ResultVo(200,"查询成功",true,dataVo);
+        }catch (Exception e){
+            resultVo = new ResultVo(-1,"查询失败",false,null);
         }
-        map.put("message","留言获取成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data:",pageInfo);
-        return map;
+        return resultVo;
     }
 
     @Override
-    public Map<String, Object> add(MessageBoardWithBLOBs messageBoard) {
-        Map<String,Object> map = new HashMap<>();
-        if (messageBoardMapper.insert(messageBoard) != 1){
-            map.put("message","留言添加失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
-            return map;
+    public ResultVo add(MessageBoardWithBLOBs messageBoard) {
+        ResultVo resultVo;
+        if(messageBoard.getCreateTime() == null){
+            messageBoard.setCreateTime(new Date());
         }
-        map.put("message","留言添加成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data:",1);
-        return map;
+        int affectedRows = messageBoardMapper.insertSelective(messageBoard);
+        if(affectedRows>0){
+            resultVo = new ResultVo(200,"添加成功",true,messageBoard);
+        }else {
+            resultVo = new ResultVo(-1,"添加失败",false,null);
+        }
+        return resultVo;
     }
 
     @Override
-    public Map<String, Object> delete(Long id) {
-        Map<String,Object> map = new HashMap<>();
-        if (messageBoardMapper.deleteByPrimaryKey(id) != 1){
-            map.put("message","留言删除失败");
-            map.put("code",404);
-            map.put("success",false);
-            map.put("data", "{错误描述}");
-            return map;
+    public ResultVo delete(Long id) {
+        int affectedRows = messageBoardMapper.deleteByPrimaryKey(id);
+        ResultVo resultVo;
+        if(affectedRows>0){
+            resultVo = new ResultVo(200,"删除成功",true,null);
+        }else {
+            resultVo = new ResultVo(-1,"删除失败",false,null);
         }
-        map.put("message","留言删除成功");
-        map.put("code",200);
-        map.put("success",true);
-        map.put("data:",1);
-        return map;
+        return resultVo;
 
+    }
+
+    @Override
+    public ResultVo reply(MessageBoardWithBLOBs messageBoard) {
+        int affectedRows = messageBoardMapper.updateByPrimaryKeySelective(messageBoard);
+        ResultVo resultVo;
+        if(affectedRows>0){
+            resultVo = new ResultVo(200,"回复留言成功",true,null);
+        }else {
+            resultVo = new ResultVo(-1,"回复留言失败",false,null);
+        }
+        return resultVo;
     }
 }

@@ -2,38 +2,35 @@ package com.fc.controller;
 
 import com.fc.entity.Carousel;
 import com.fc.service.CarouselService;
+import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("carousel")
 public class CarouselController {
 @Autowired
     private CarouselService carouselService;
-@RequestMapping("list")
-public Map<String,Object> findAll(Integer pageNo,Integer pageSize){
-   return carouselService.findAll(pageNo,pageSize);
+@GetMapping("list")
+public ResultVo findAll(Integer pageNo, Integer pageSize,Integer id){
+   return carouselService.findAll(pageNo,pageSize,id);
 
 }
-@RequestMapping("del")
-public Map<String, Object> delete(Integer id){
+@GetMapping("del")
+public ResultVo delete(Integer id){
     return carouselService.delete(id);
 
 }
-@RequestMapping("add")
-public Map<String, Object> add(@RequestBody Carousel carousel){
+@PostMapping("add")
+public ResultVo add(@RequestBody Carousel carousel){
     return carouselService.add(carousel);
 }
-@RequestMapping("update")
-public Map<String, Object> update(@RequestBody Carousel carousel){
+@PostMapping("update")
+public ResultVo update(@RequestBody Carousel carousel){
     return carouselService.update(carousel);
 }
-@RequestMapping("state")
-public Map<String, Object> state(Integer id){
+@PostMapping("state")
+public ResultVo state(Long id){
 
     return carouselService.state(id);
 }

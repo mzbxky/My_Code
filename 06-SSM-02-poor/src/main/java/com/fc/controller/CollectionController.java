@@ -2,12 +2,9 @@ package com.fc.controller;
 
 import com.fc.entity.Collection;
 import com.fc.service.CollectionService;
+import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("collect")
@@ -15,17 +12,17 @@ public class CollectionController {
     @Autowired
     private CollectionService collectionService;
     //获取收藏
-    @RequestMapping("list")
-   public Map<String,Object> findAll(Integer pageNo,Integer pageSize){
+    @GetMapping("list")
+   public ResultVo findAll(Integer pageNo, Integer pageSize,Long id){
 
-        return collectionService.findAll(pageNo,pageSize);
+        return collectionService.findAll(pageNo,pageSize,id);
    }
-   @RequestMapping("del")
-   public Map<String,Object> delete(Long id){
+   @GetMapping("del")
+   public ResultVo delete(Long id){
        return collectionService.delete(id);
    }
-   @RequestMapping("add")
-   public Map<String ,Object> add(@RequestBody Collection collection){
+   @PostMapping("add")
+   public ResultVo add(@RequestBody Collection collection){
         return collectionService.add(collection);
    }
 }

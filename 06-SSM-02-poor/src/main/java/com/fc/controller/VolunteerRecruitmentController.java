@@ -2,36 +2,37 @@ package com.fc.controller;
 
 import com.fc.entity.VolunteerRecruitment;
 import com.fc.service.VolunteerRecruitmentService;
+import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
-import java.util.Map;
 
 @RestController
 @RequestMapping("recruitment")
 public class VolunteerRecruitmentController {
     @Autowired
     private VolunteerRecruitmentService volunteerRecruitmentService;
-    @RequestMapping("list")
-    public Map<String, Object> findAll(Integer pageNo, Integer pageSize){
-        return volunteerRecruitmentService.findAll(pageNo,pageSize);
+    @GetMapping("list")
+    public ResultVo findAll(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
+                            @RequestParam(value = "pageSize",defaultValue = "1") Integer pageSize,
+                            Long id){
+        return volunteerRecruitmentService.findAll(pageNo,pageSize,id);
     }
-    @RequestMapping("add")
-    public Map<String,Object> add(VolunteerRecruitment volunteerRecruitment){
+    @PostMapping("add")
+    public ResultVo add(@RequestBody VolunteerRecruitment volunteerRecruitment){
         return volunteerRecruitmentService.add(volunteerRecruitment);
     }
-    @RequestMapping("del")
-    public Map<String,Object> delete(Long id){
+    @GetMapping("del")
+    public ResultVo delete(Long id){
         return volunteerRecruitmentService.delete(id);
     }
-    @RequestMapping("update")
-    public Map<String,Object> update(VolunteerRecruitment volunteerRecruitment){
+    @PostMapping("update")
+    public ResultVo update(@RequestBody VolunteerRecruitment volunteerRecruitment){
         return volunteerRecruitmentService.update(volunteerRecruitment);
     }
-    @RequestMapping("click")
-    public Map<String,Object> click(Long id, Date lastClickTime){
+    @PostMapping("click")
+    public ResultVo click(Long id, Date lastClickTime){
         return volunteerRecruitmentService.click(id,lastClickTime);
     }
 }
