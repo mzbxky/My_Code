@@ -13,44 +13,7 @@ import java.io.InputStream;
 import java.util.List;
 
 public class PropertiesTest {
-//@Test
-//    public void test(){
-//    //读取配置
-//    try {
-//        InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
-//        //获取工厂
-//        SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
-//        //获取连接
-//        SqlSession session = factory.openSession();
-//        StudentDao studentDao = session.getMapper(StudentDao.class);
-//        List<Student> students = studentDao.findAll();
-//        for (Student student : students) {
-//            System.out.println(student);
-//        }
-//
-//        session.close();
-//    } catch (IOException e) {
-//        e.printStackTrace();
-//    }
-//}
-//    @Test
-//    public void test(){
-//        try {
-//            InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
-//            SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
-//            SqlSession session = factory.openSession();
-//            StudentDao studentDao = session.getMapper(StudentDao.class);
-//            List<Student> students = studentDao.findAll();
-//            for (Student student : students) {
-//                System.out.println(student);
-//            }
-//            session.commit();
-//            session.close();
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+
     @Test
     public void test(){
         try {

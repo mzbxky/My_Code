@@ -17,7 +17,7 @@ public class CollectionImpl implements CollectionService {
     @Autowired
 private CollectionMapper collectionMapper;
     @Override
-    public ResultVo findAll(Integer pageNo, Integer pageSize,Long id) {
+    public ResultVo getList(Integer pageNo, Integer pageSize,Long id) {
         List<Collection> collections;
         ResultVo resultVo = new ResultVo();
         try {
@@ -28,6 +28,7 @@ private CollectionMapper collectionMapper;
                 Collection collection = collectionMapper.selectByPrimaryKey(id);
                 collections = new ArrayList<>();
                 collections.add(collection);
+
             }
             PageInfo<Collection> pageInfo = new PageInfo<>(collections);
 
