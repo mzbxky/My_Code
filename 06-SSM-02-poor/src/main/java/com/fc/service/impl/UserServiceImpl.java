@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
 private UserMapper userMapper;
     @Override
-    public ResultVo findAll(Integer pageNo, Integer pageSize,Long id) {
+    public ResultVo getList(Integer pageNo, Integer pageSize,Long id) {
         List<User> users;
         ResultVo resultVo = new ResultVo();
         try {

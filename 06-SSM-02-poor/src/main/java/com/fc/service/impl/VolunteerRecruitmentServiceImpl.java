@@ -17,10 +17,10 @@ public class VolunteerRecruitmentServiceImpl implements VolunteerRecruitmentServ
     @Autowired
     private VolunteerRecruitmentMapper volunteerRecruitmentMapper;
     @Override
-    public ResultVo findAll(Integer pageNo, Integer pageSize,Long id) {
+    public ResultVo getList(Integer pageNo, Integer pageSize,Long id) {
         List<VolunteerRecruitment> volunteerRecruitments;
-        ResultVo resultVo = new ResultVo();
-        try {
+        ResultVo resultVo;
+        //try {
             if(id == null){
                 PageHelper.startPage(pageNo,pageSize);
                 volunteerRecruitments = volunteerRecruitmentMapper.selectByExample(null);
@@ -28,6 +28,8 @@ public class VolunteerRecruitmentServiceImpl implements VolunteerRecruitmentServ
                 VolunteerRecruitment volunteerRecruitment = volunteerRecruitmentMapper.selectByPrimaryKey(id);
                 volunteerRecruitments = new ArrayList<>();
                 volunteerRecruitments.add(volunteerRecruitment);
+
+                click(volunteerRecruitment.getId(), null);
             }
             PageInfo<VolunteerRecruitment> pageInfo = new PageInfo<>(volunteerRecruitments);
 
@@ -35,10 +37,10 @@ public class VolunteerRecruitmentServiceImpl implements VolunteerRecruitmentServ
 
             resultVo = new ResultVo(200,"查询成功",true,dataVo);
 
-        }catch (Exception e){
-            resultVo = new ResultVo(-400,"查询失败",false,null);
-
-        }
+//        }catch (Exception e){
+//            resultVo = new ResultVo(-400,"查询失败",false,null);
+//
+//        }
 
         return resultVo;
 

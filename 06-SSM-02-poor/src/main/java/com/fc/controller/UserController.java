@@ -33,10 +33,10 @@ public ResultVo deleteUser(Long id){
     //用户获取
     @GetMapping("list")
 
-    public ResultVo findAll(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
+    public ResultVo getList(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
                             @RequestParam(value = "pageSize",defaultValue = "1") Integer pageSize,
                             Long id){
 
-        return userService.findAll(pageNo,pageSize,id);
+        return userService.getList(pageNo,pageSize,id);
     }
 }

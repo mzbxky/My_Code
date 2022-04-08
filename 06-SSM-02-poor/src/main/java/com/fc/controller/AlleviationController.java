@@ -6,16 +6,14 @@ import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
-
 @RestController
 @RequestMapping("policy")
 public class AlleviationController {
     @Autowired
     private AlleviationService alleviationService;
     @GetMapping("list")
-    public ResultVo findAll(Integer pageNo, Integer pageSize,Long id){
-        return alleviationService.findAll(pageNo,pageSize,id);
+    public ResultVo getList(Integer pageNo, Integer pageSize,Long id){
+        return alleviationService.getList(pageNo,pageSize,id);
     }
     @PostMapping("add")
     public ResultVo add(@RequestBody Alleviation alleviation){
@@ -30,7 +28,7 @@ public class AlleviationController {
         return alleviationService.delete(id);
     }
     @PostMapping("click")
-    public ResultVo click( Date lastClickTime, Long id ){
-        return alleviationService.click(lastClickTime,id);
+    public ResultVo click( @RequestBody Alleviation alleviation ){
+        return alleviationService.click(alleviation.getLastClickTime(),alleviation.getId());
     }
 }

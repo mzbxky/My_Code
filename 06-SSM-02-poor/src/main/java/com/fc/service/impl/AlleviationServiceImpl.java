@@ -1,6 +1,7 @@
 package com.fc.service.impl;
 
 
+import com.fc.dao.AlleviationMapper;
 import com.fc.entity.Alleviation;
 import com.fc.service.AlleviationService;
 import com.fc.vo.DataVo;
@@ -9,15 +10,17 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.fc.dao.AlleviationMapper;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Service
 public class AlleviationServiceImpl implements AlleviationService {
     @Autowired
     private AlleviationMapper alleviationMapper;
     @Override
-    public ResultVo findAll(Integer pageNo, Integer pageSize,Long id) {
+    public ResultVo getList(Integer pageNo, Integer pageSize,Long id) {
         ResultVo resultVo;
         List<Alleviation> alleviations;
         try {
@@ -28,6 +31,7 @@ public class AlleviationServiceImpl implements AlleviationService {
                 Alleviation alleviation = alleviationMapper.selectByPrimaryKey(id);
                 alleviations = new ArrayList<>();
                 alleviations.add(alleviation);
+                click(null,alleviation.getId());
             }
             PageInfo<Alleviation> pageInfo = new PageInfo<>(alleviations);
             DataVo<Alleviation> dataVo = new DataVo<>(pageInfo.getTotal(),alleviations,pageNo,pageSize);
@@ -46,7 +50,10 @@ public class AlleviationServiceImpl implements AlleviationService {
         }
         int affectedRows = alleviationMapper.insertSelective(alleviation);
         if(affectedRows>0){
-            resultVo = new ResultVo(200,"添加陈公公",true,alleviation);
+            if(alleviation.getClickNum() == null){
+                alleviation.setClickNum(0);
+            }
+            resultVo = new ResultVo(200,"添加成功",true,alleviation);
         }else {
             resultVo = new ResultVo(-1,"添加失败",false,null);
         }

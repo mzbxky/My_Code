@@ -6,7 +6,7 @@ import com.fc.vo.ResultVo;
 import java.util.Date;
 
 public interface AlleviationService {
-    ResultVo findAll(Integer pageNo, Integer pageSize,Long id);
+    ResultVo getList(Integer pageNo, Integer pageSize,Long id);
 
     ResultVo add(Alleviation alleviation);
 

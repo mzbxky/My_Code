@@ -4,7 +4,7 @@ import com.fc.entity.Carousel;
 import com.fc.vo.ResultVo;
 
 public interface CarouselService {
-    ResultVo findAll(Integer pageNo, Integer pageSize,Integer id);
+    ResultVo getList(Integer pageNo, Integer pageSize,Integer id);
 
     ResultVo delete(Integer id);
 

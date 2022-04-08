@@ -12,10 +12,10 @@ public class MessageBoardController {
     @Autowired
     private MessageBoardService messageBoardService;
     @GetMapping("/list")
-    public ResultVo findAll(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
+    public ResultVo getList(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
                             @RequestParam(value = "pageSize",defaultValue = "1") Integer pageSize,
                             Long id){
-        return messageBoardService.findAll(pageNo,pageSize,id);
+        return messageBoardService.getList(pageNo,pageSize,id);
     }
     @PostMapping("add")
     public ResultVo add(@RequestBody MessageBoardWithBLOBs messageBoard){

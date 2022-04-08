@@ -6,7 +6,7 @@ import com.fc.vo.ResultVo;
 import java.util.Date;
 
 public interface PoorService {
-    ResultVo findAll(Integer pageNo, Integer pageSize,Long id);
+    ResultVo getList(Integer pageNo, Integer pageSize,Long id);
 
     ResultVo add(PoorWithBLOBs poor);
 

@@ -20,7 +20,7 @@ public class PoorServiceImpl implements PoorService {
     @Autowired
     private PoorMapper poorMapper;
     @Override
-    public ResultVo findAll(Integer pageNo, Integer pageSize,Long id) {
+    public ResultVo getList(Integer pageNo, Integer pageSize,Long id) {
        ResultVo resultVo;
        List<Poor> poors;
        try {
@@ -29,10 +29,11 @@ public class PoorServiceImpl implements PoorService {
                poors = poorMapper.selectByExample(null);
 
            }else {
-
                Poor poor = poorMapper.selectByPrimaryKey(id);
                poors=new ArrayList<>();
                poors.add(poor);
+
+               click(poor.getId(),null);
            }
            PageInfo<Poor> pageInfo = new PageInfo<>(poors);
 
@@ -54,6 +55,9 @@ public class PoorServiceImpl implements PoorService {
         }
         int affectedRows = poorMapper.insertSelective(poor);
         if(affectedRows>0){
+            if (poor.getClickNum()==null){
+                poor.setClickNum(0);
+            }
             resultVo = new ResultVo(200,"添加成功",true,poor);
         }else {
             resultVo = new ResultVo(-1,"添加失败",false,null);

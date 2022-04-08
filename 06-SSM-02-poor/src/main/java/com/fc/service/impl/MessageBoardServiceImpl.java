@@ -18,7 +18,7 @@ public class MessageBoardServiceImpl implements MessageBoardService {
     @Autowired
     private MessageBoardMapper messageBoardMapper;
     @Override
-    public ResultVo findAll(Integer pageNo, Integer pageSize,Long id) {
+    public ResultVo getList(Integer pageNo, Integer pageSize,Long id) {
         List<MessageBoard> messageBoards;
         ResultVo resultVo = new ResultVo();
         try {

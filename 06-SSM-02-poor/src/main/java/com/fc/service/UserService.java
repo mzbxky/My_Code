@@ -10,5 +10,5 @@ public interface UserService {
 
     ResultVo addUser(User user);
 
-    ResultVo findAll(Integer pageNo, Integer pageSize,Long id);
+    ResultVo getList(Integer pageNo, Integer pageSize,Long id);
 }

@@ -18,7 +18,7 @@ public class CarouselServiceImpl implements CarouselService {
 @Autowired
 private CarouselMapper carouselMapper;
     @Override
-    public ResultVo findAll(Integer pageNo, Integer pageSize,Integer id) {
+    public ResultVo getList(Integer pageNo, Integer pageSize,Integer id) {
         List<Carousel> carousels;
         ResultVo resultVo;
         try {

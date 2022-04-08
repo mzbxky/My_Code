@@ -13,9 +13,9 @@ public class CollectionController {
     private CollectionService collectionService;
     //获取收藏
     @GetMapping("list")
-   public ResultVo findAll(Integer pageNo, Integer pageSize,Long id){
+   public ResultVo getList(Integer pageNo, Integer pageSize,Long id){
 
-        return collectionService.findAll(pageNo,pageSize,id);
+        return collectionService.getList(pageNo,pageSize,id);
    }
    @GetMapping("del")
    public ResultVo delete(Long id){

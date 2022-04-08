@@ -6,18 +6,16 @@ import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
-
 @RestController
 @RequestMapping("recruitment")
 public class VolunteerRecruitmentController {
     @Autowired
     private VolunteerRecruitmentService volunteerRecruitmentService;
     @GetMapping("list")
-    public ResultVo findAll(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
+    public ResultVo getList(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
                             @RequestParam(value = "pageSize",defaultValue = "1") Integer pageSize,
                             Long id){
-        return volunteerRecruitmentService.findAll(pageNo,pageSize,id);
+        return volunteerRecruitmentService.getList(pageNo,pageSize,id);
     }
     @PostMapping("add")
     public ResultVo add(@RequestBody VolunteerRecruitment volunteerRecruitment){
@@ -31,8 +29,8 @@ public class VolunteerRecruitmentController {
     public ResultVo update(@RequestBody VolunteerRecruitment volunteerRecruitment){
         return volunteerRecruitmentService.update(volunteerRecruitment);
     }
-    @PostMapping("click")
-    public ResultVo click(Long id, Date lastClickTime){
-        return volunteerRecruitmentService.click(id,lastClickTime);
+    @PostMapping ("click")
+    public ResultVo click(@RequestBody VolunteerRecruitment volunteerRecruitment){
+        return volunteerRecruitmentService.click(volunteerRecruitment.getId(),volunteerRecruitment.getLastClickTime());
     }
 }

@@ -22,6 +22,10 @@
     <file type="web" url="file://$PROJECT_DIR$/06-SSM-01-Wyy" />
     <file type="web" url="file://$PROJECT_DIR$/06-SSM-01-Wyy-02" />
     <file type="web" url="file://$PROJECT_DIR$/06-SSM-02-poor" />
+    <file type="web" url="file://$PROJECT_DIR$/06-SSM-02-poor -02" />
+    <file type="web" url="file://$PROJECT_DIR$/07-JWT-00-Session-Cookie" />
+    <file type="web" url="file://$PROJECT_DIR$/07-JWT-02-Web" />
+    <file type="web" url="file://$PROJECT_DIR$/07-JWT-03-Interceptor" />
     <file type="web" url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb" />
     <file type="web" url="file://$PROJECT_DIR$/aa" />
   </component>
@@ -74,8 +78,6 @@
         <option value="$PROJECT_DIR$/05-SpringMVC-01-Start/pom.xml" />
         <option value="$PROJECT_DIR$/05-SpringMVC-02-RequestMapping/pom.xml" />
         <option value="$PROJECT_DIR$/05-SpringMVC-03-Param/pom.xml" />
-        <option value="$PROJECT_DIR$/../devo1/observer/pom.xml" />
-        <option value="$PROJECT_DIR$/../devo1/observer1/pom.xml" />
         <option value="$PROJECT_DIR$/05-SpringMVC-04-Encoding/pom.xml" />
         <option value="$PROJECT_DIR$/05-SpringMVC-05-Date/pom.xml" />
         <option value="$PROJECT_DIR$/05-SpringMVC-06-ViewResolver/pom.xml" />
@@ -92,6 +94,11 @@
         <option value="$PROJECT_DIR$/06-SSM-01-02-Wyy/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-01-Wyy-02/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-02-poor/pom.xml" />
+        <option value="$PROJECT_DIR$/07-JWT-00-Session-Cookie/pom.xml" />
+        <option value="$PROJECT_DIR$/07-JWT-01-Start/pom.xml" />
+        <option value="$PROJECT_DIR$/07-JWT-02-Web/pom.xml" />
+        <option value="$PROJECT_DIR$/07-JWT-03-Interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/02-MyBatis-00JDBC/pom.xml" />
       </list>
     </option>
   </component>

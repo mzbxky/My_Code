@@ -12,8 +12,8 @@ public class CarouselController {
 @Autowired
     private CarouselService carouselService;
 @GetMapping("list")
-public ResultVo findAll(Integer pageNo, Integer pageSize,Integer id){
-   return carouselService.findAll(pageNo,pageSize,id);
+public ResultVo getList(Integer pageNo, Integer pageSize,Integer id){
+   return carouselService.getList(pageNo,pageSize,id);
 
 }
 @GetMapping("del")
