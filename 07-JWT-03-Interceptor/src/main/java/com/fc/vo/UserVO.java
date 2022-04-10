@@ -13,6 +13,6 @@ import java.util.Date;
 public class UserVO {
     private Integer id;
     private String username;
-    @JsonFormat(pattern = "yyyy-mm-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date lastAccessTime;
 }

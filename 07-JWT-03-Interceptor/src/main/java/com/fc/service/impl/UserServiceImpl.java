@@ -10,28 +10,28 @@ import java.util.Date;
 public class UserServiceImpl implements UserService {
     @Override
     public UserVO login(String username, String password) {
-        // 连接数据库
+        //连接数据库
         UserVO userVO = null;
-
-        if (username.equals("易烊千玺") && password.equals("123456")) {
+        if(username.equals("黑小虎")&&password.equals("123456")){
             userVO = new UserVO();
             userVO.setId(1);
             userVO.setUsername(username);
             userVO.setLastAccessTime(new Date());
         }
-
         return userVO;
     }
 //    @Override
 //    public UserVO login(String username, String password) {
-//        //连接数据库
+//        // 连接数据库
 //        UserVO userVO = null;
-//        if(username.equals("黑小虎")&&password.equals("123456")){
-//            userVO = new UserVO();
-//            userVO.setId(1);
-//            userVO.setUsername(username);
-//            userVO.setLastAccessTime(new Date());
+//
+//        if (username.equals("易烊千玺") && password.equals("123456")) {
+//             userVO = new UserVO();
+//             userVO.setId(1);
+//             userVO.setUsername(username);
+//             userVO.setLastAccessTime(new Date());
 //        }
+//
 //        return userVO;
 //    }
 }

@@ -64,6 +64,7 @@
       <module fileurl="file://$PROJECT_DIR$/07-JWT-01-Start/07-JWT-01-Start.iml" filepath="$PROJECT_DIR$/07-JWT-01-Start/07-JWT-01-Start.iml" />
       <module fileurl="file://$PROJECT_DIR$/07-JWT-02-Web/07-JWT-02-Web.iml" filepath="$PROJECT_DIR$/07-JWT-02-Web/07-JWT-02-Web.iml" />
       <module fileurl="file://$PROJECT_DIR$/07-JWT-03-Interceptor/07-JWT-03-Interceptor.iml" filepath="$PROJECT_DIR$/07-JWT-03-Interceptor/07-JWT-03-Interceptor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-JWT-04-CustomJwt/07-JWT-04-CustomJwt.iml" filepath="$PROJECT_DIR$/07-JWT-04-CustomJwt/07-JWT-04-CustomJwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb/_01ThirdLayerApplicationWeb.iml" filepath="$PROJECT_DIR$/_01ThirdLayerApplicationWeb/_01ThirdLayerApplicationWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dev01.iml" filepath="$PROJECT_DIR$/.idea/dev01.iml" />
     </modules>

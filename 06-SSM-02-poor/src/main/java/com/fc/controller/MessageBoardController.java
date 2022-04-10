@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/comment")
 @RestController
+@CrossOrigin
 public class MessageBoardController {
     @Autowired
     private MessageBoardService messageBoardService;

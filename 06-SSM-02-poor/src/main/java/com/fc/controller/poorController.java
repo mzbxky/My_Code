@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 //
 @RestController
 @RequestMapping("poor")
+@CrossOrigin
 public class poorController {
     @Autowired
 private PoorService poorService;

@@ -17,43 +17,72 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserService userService;
-
-    @RequestMapping("login")
-    public Map<String, Object> login(User user) {
-        UserVO vo = userService.login(user.getUsername(), user.getPassword());
-
-        Map<String, Object> map = new HashMap<>();
-
-        if (vo == null) {
-            map.put("message", "登录失败...");
-            map.put("code", -1);
-            map.put("success", false);
-        } else {
-            Map<String, Object> claim = new HashMap<>();
-
-            claim.put("username", vo.getUsername());
-            claim.put("id", vo.getId());
-
-            String token = JwtUtil.createToken(claim, System.currentTimeMillis() + 1000);
-
-            map.put("message", "登录成功...");
-            map.put("code", 200);
-            map.put("success", true);
-            map.put("data", vo);
-            map.put("token", token);
-        }
-
-        return map;
-    }
-
-    @RequestMapping("verifyToken")
-    public Map<String, Object> verify(HttpServletRequest request) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("success", true);
-        map.put("code", -1);
-        map.put("message", "该干啥干啥");
-        map.put("data", request.getAttribute("claim"));
-
-        return map;
-    }
+      @RequestMapping("login")
+    public Map<String ,Object> login(User user){
+          UserVO vo = userService.login(user.getUsername(),user.getPassword());
+          Map<String ,Object> map = new HashMap<>();
+          if (vo == null){
+              map.put("message","登录失败");
+              map.put("code",-1);
+              map.put("success",false);
+          }else {
+              Map<String ,Object> claim = new HashMap<>();
+              claim.put("username",vo.getUsername());
+              claim.put("id",vo.getId());
+              String token = JwtUtil.createToken(claim,System.currentTimeMillis()+1000*10);
+              map.put("message","登录成功");
+              map.put("code",200);
+              map.put("success",true);
+              map.put("data",vo);
+              map.put("token",token);
+          }
+          return map;
+      }
+      @RequestMapping("verifyToken")
+      public Map<String,Object> verify(HttpServletRequest request){
+          Map<String,Object> map = new HashMap<>();
+          map.put("success",true);
+          map.put("code",-1);
+          map.put("message","成了");
+          map.put("data",request.getAttribute("claim"));
+          return map;
+      }
+//    @RequestMapping("login")
+//    public Map<String, Object> login(User user) {
+//        UserVO vo = userService.login(user.getUsername(), user.getPassword());
+//
+//        Map<String, Object> map = new HashMap<>();
+//
+//        if (vo == null) {
+//            map.put("message", "登录失败...");
+//            map.put("code", -1);
+//            map.put("success", false);
+//        } else {
+//            Map<String, Object> claim = new HashMap<>();
+//
+//            claim.put("username", vo.getUsername());
+//            claim.put("id", vo.getId());
+//
+//            String token = JwtUtil.createToken(claim, System.currentTimeMillis() + 1000 * 10);
+//
+//            map.put("message", "登录成功...");
+//            map.put("code", 200);
+//            map.put("success", true);
+//            map.put("data", vo);
+//            map.put("token", token);
+//        }
+//
+//        return map;
+//    }
+//
+//    @RequestMapping("verifyToken")
+//    public Map<String, Object> verify(HttpServletRequest request) {
+//        Map<String, Object> map = new HashMap<>();
+//        map.put("success", true);
+//        map.put("code", -1);
+//        map.put("message", "该干啥干啥");
+//        map.put("data", request.getAttribute("claim"));
+//
+//        return map;
+//    }
 }
