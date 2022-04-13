@@ -7,22 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("recruitment")
+@RequestMapping("volunteer")
 @CrossOrigin
 public class VolunteerRecruitmentController {
     @Autowired
     private VolunteerRecruitmentService volunteerRecruitmentService;
-    @GetMapping("list")
-    public ResultVo getList(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
+    @GetMapping("getlist")
+    public ResultVo getList(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                             @RequestParam(value = "pageSize",defaultValue = "1") Integer pageSize,
                             Long id){
-        return volunteerRecruitmentService.getList(pageNo,pageSize,id);
+        return volunteerRecruitmentService.getList(pageNum,pageSize,id);
     }
     @PostMapping("add")
     public ResultVo add(@RequestBody VolunteerRecruitment volunteerRecruitment){
         return volunteerRecruitmentService.add(volunteerRecruitment);
     }
-    @GetMapping("del")
+    @GetMapping("delete")
     public ResultVo delete(Long id){
         return volunteerRecruitmentService.delete(id);
     }

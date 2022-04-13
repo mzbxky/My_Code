@@ -7,18 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("collect")
+@RequestMapping("collection")
 @CrossOrigin
 public class CollectionController {
     @Autowired
     private CollectionService collectionService;
     //获取收藏
-    @GetMapping("list")
-   public ResultVo getList(Integer pageNo, Integer pageSize,Long id){
+    @GetMapping("getlist")
+   public ResultVo getList(Integer pageNum, Integer pageSize,Long id){
 
-        return collectionService.getList(pageNo,pageSize,id);
+        return collectionService.getList(pageNum,pageSize,id);
    }
-   @GetMapping("del")
+   @GetMapping("delete")
    public ResultVo delete(Long id){
        return collectionService.delete(id);
    }

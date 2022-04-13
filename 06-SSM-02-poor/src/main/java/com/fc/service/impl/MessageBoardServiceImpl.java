@@ -1,7 +1,6 @@
 package com.fc.service.impl;
 
 import com.fc.dao.MessageBoardMapper;
-import com.fc.entity.MessageBoard;
 import com.fc.entity.MessageBoardWithBLOBs;
 import com.fc.service.MessageBoardService;
 import com.fc.vo.DataVo;
@@ -11,7 +10,9 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Service
 public class MessageBoardServiceImpl implements MessageBoardService {
@@ -19,20 +20,20 @@ public class MessageBoardServiceImpl implements MessageBoardService {
     private MessageBoardMapper messageBoardMapper;
     @Override
     public ResultVo getList(Integer pageNo, Integer pageSize,Long id) {
-        List<MessageBoard> messageBoards;
+        List<MessageBoardWithBLOBs> messageBoards;
         ResultVo resultVo = new ResultVo();
         try {
             if (id == null){
                 PageHelper.startPage(pageNo,pageSize);
-                messageBoards = messageBoardMapper.selectByExample(null);
+                messageBoards = messageBoardMapper.selectByExampleWithBLOBs(null);
             }else {
-                MessageBoard messageBoard = messageBoardMapper.selectByPrimaryKey(id);
+                MessageBoardWithBLOBs messageBoard = messageBoardMapper.selectByPrimaryKey(id);
                 messageBoards = new ArrayList<>();
                 messageBoards.add(messageBoard);
             }
-            PageInfo<MessageBoard> pageInfo = new PageInfo<>(messageBoards);
+            PageInfo<MessageBoardWithBLOBs> pageInfo = new PageInfo<>(messageBoards);
 
-            DataVo<MessageBoard> dataVo = new DataVo<>(pageInfo.getTotal(),messageBoards,pageNo,pageSize);
+            DataVo<MessageBoardWithBLOBs> dataVo = new DataVo<>(pageInfo.getTotal(),messageBoards,pageNo,pageSize);
 
             resultVo = new ResultVo(200,"查询成功",true,dataVo);
         }catch (Exception e){

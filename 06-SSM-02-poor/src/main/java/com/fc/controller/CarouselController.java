@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.*;
 public class CarouselController {
 @Autowired
     private CarouselService carouselService;
-@GetMapping("list")
-public ResultVo getList(Integer pageNo, Integer pageSize,Integer id){
-   return carouselService.getList(pageNo,pageSize,id);
+@GetMapping("getlist")
+public ResultVo getList(Integer pageNum, Integer pageSize,Integer id){
+   return carouselService.getList(pageNum,pageSize,id);
 
 }
-@GetMapping("del")
+@GetMapping("delete")
 public ResultVo delete(Integer id){
     return carouselService.delete(id);
 

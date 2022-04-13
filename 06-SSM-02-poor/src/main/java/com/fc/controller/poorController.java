@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.*;
 public class poorController {
     @Autowired
 private PoorService poorService;
-    @GetMapping("list")
-    public ResultVo getList(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
+    @GetMapping("getlist")
+    public ResultVo getList(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                             @RequestParam(value = "pageSize",defaultValue = "3") Integer pageSize,
                             Long id){
-        return poorService.getList(pageNo,pageSize,id);
+        return poorService.getList(pageNum,pageSize,id);
     }
     @PostMapping("add")
     public ResultVo add(@RequestBody PoorWithBLOBs poor){
@@ -27,7 +27,7 @@ private PoorService poorService;
     public ResultVo update(@RequestBody PoorWithBLOBs poor){
         return poorService.update(poor);
     }
-    @GetMapping("del")
+    @GetMapping("delete")
     public ResultVo delete(Long id){
         return poorService.delete(id);
     }

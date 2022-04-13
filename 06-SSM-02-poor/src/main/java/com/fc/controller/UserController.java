@@ -18,7 +18,7 @@ public class UserController {
         return userService.addUser(user);
     }
 
-    @GetMapping("del")
+    @GetMapping("delete")
 
     //删除用户
 public ResultVo deleteUser(Long id){
@@ -32,12 +32,14 @@ public ResultVo deleteUser(Long id){
     }
 
     //用户获取
-    @GetMapping("list")
+    @GetMapping("getlist")
 
-    public ResultVo getList(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
+    public ResultVo getList(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                             @RequestParam(value = "pageSize",defaultValue = "1") Integer pageSize,
-                            Long id){
+                            Long id,String username,String name){
 
-        return userService.getList(pageNo,pageSize,id);
+        return userService.getList(pageNum,pageSize,id,username,name);
     }
+
+
 }

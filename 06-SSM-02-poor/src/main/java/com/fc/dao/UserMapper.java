@@ -2,10 +2,12 @@ package com.fc.dao;
 
 import com.fc.entity.User;
 import com.fc.entity.UserExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface UserMapper {
+    User selectUser(@Param("username") String username);
     long countByExample(UserExample example);
 
     int deleteByExample(UserExample example);

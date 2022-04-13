@@ -22,22 +22,22 @@ public class PoorServiceImpl implements PoorService {
     @Override
     public ResultVo getList(Integer pageNo, Integer pageSize,Long id) {
        ResultVo resultVo;
-       List<Poor> poors;
+       List<PoorWithBLOBs> poors;
        try {
            if(id == null){
                PageHelper.startPage(pageNo,pageSize);
-               poors = poorMapper.selectByExample(null);
+               poors = poorMapper.selectByExampleWithBLOBs(null);
 
            }else {
-               Poor poor = poorMapper.selectByPrimaryKey(id);
+               PoorWithBLOBs poorWithBLOBs = poorMapper.selectByPrimaryKey(id);
                poors=new ArrayList<>();
-               poors.add(poor);
+               poors.add(poorWithBLOBs);
 
-               click(poor.getId(),null);
+               click(poorWithBLOBs.getId(),null);
            }
-           PageInfo<Poor> pageInfo = new PageInfo<>(poors);
+           PageInfo<PoorWithBLOBs> pageInfo = new PageInfo<>(poors);
 
-           DataVo<Poor> dataVo = new DataVo<>(pageInfo.getTotal(),poors,pageNo,pageSize);
+           DataVo<PoorWithBLOBs> dataVo = new DataVo<>(pageInfo.getTotal(),poors,pageNo,pageSize);
 
            resultVo = new ResultVo(200,"查询成功",true,dataVo);
 

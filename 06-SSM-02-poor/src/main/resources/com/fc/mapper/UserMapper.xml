@@ -14,7 +14,20 @@
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="photo" jdbcType="VARCHAR" property="photo" />
   </resultMap>
-
+  <select id="selectUser" resultType="com.fc.entity.User">
+    select * from user where username = #{username}
+  </select>
+<!--  <select id="selectByKeyword">-->
+<!--    select *-->
+<!--    from user-->
+<!--    where 1=1-->
+<!--    <if test="name!=null">-->
+<!--      and name like #{name}-->
+<!--    </if>-->
+<!--    <if test="info != null">-->
+<!--      and info like #{info}-->
+<!--    </if>-->
+<!--  </select>-->
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

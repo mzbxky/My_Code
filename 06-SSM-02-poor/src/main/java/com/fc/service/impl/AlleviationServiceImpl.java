@@ -26,7 +26,7 @@ public class AlleviationServiceImpl implements AlleviationService {
         try {
             if(id == null){
                 PageHelper.startPage(pageNo,pageSize);
-                alleviations = alleviationMapper.selectByExample(null);
+                alleviations = alleviationMapper.selectByExampleWithBLOBs(null);
             }else {
                 Alleviation alleviation = alleviationMapper.selectByPrimaryKey(id);
                 alleviations = new ArrayList<>();
@@ -47,6 +47,9 @@ public class AlleviationServiceImpl implements AlleviationService {
         ResultVo resultVo;
         if(alleviation.getCreateTime() == null){
             alleviation.setCreateTime(new Date());
+        }
+        if(alleviation.getClickNum() == null){
+            alleviation.setClickNum(0);
         }
         int affectedRows = alleviationMapper.insertSelective(alleviation);
         if(affectedRows>0){

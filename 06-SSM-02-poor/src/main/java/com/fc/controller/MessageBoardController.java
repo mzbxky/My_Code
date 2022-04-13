@@ -6,23 +6,23 @@ import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/comment")
+@RequestMapping("msgboard")
 @RestController
 @CrossOrigin
 public class MessageBoardController {
     @Autowired
     private MessageBoardService messageBoardService;
-    @GetMapping("/list")
-    public ResultVo getList(@RequestParam(value = "pageNo",defaultValue = "1") Integer pageNo,
+    @GetMapping("/getlist")
+    public ResultVo getList(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                             @RequestParam(value = "pageSize",defaultValue = "1") Integer pageSize,
                             Long id){
-        return messageBoardService.getList(pageNo,pageSize,id);
+        return messageBoardService.getList(pageNum,pageSize,id);
     }
     @PostMapping("add")
     public ResultVo add(@RequestBody MessageBoardWithBLOBs messageBoard){
         return messageBoardService.add(messageBoard);
     }
-    @GetMapping("del")
+    @GetMapping("delete")
     public ResultVo delete(Long id){
         return messageBoardService.delete(id);
     }
