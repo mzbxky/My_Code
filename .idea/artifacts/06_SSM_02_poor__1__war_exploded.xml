@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="_06-SSM-02-poor:war exploded">
-    <output-path>$PROJECT_DIR$/06-SSM-02-aaa/target/06-SSM-02-poor-1.0-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="06-SSM-02-poor (1):war exploded">
+    <output-path>$PROJECT_DIR$/06-SSM-02-TwoPoor/target/06-SSM-02-poor-1.0-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>_06-SSM-02-poor</module>
+        <module>06-SSM-02-poor (1)</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="06-SSM-TwoPoor" />
+          <element id="module-output" name="06-SSM-02-poor (1)" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.sun.jersey:jersey-client:1.19.4" />
@@ -49,7 +49,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/06-SSM-02-TwoPoor/target/06-SSM-02-poor-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="06-SSM-TwoPoor/web/Web" />
+      <element id="javaee-facet-resources" facet="06-SSM-02-poor (1)/web/Web" />
     </root>
   </artifact>
 </component>

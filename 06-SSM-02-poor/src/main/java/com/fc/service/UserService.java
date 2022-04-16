@@ -10,6 +10,6 @@ public interface UserService {
 
     ResultVo addUser(User user);
 
-    ResultVo getList(Integer pageNo, Integer pageSize,Long id,String username,String name);
+    ResultVo getList(Integer pageNo, Integer pageSize,String info ,String search,Long id );
 
 }

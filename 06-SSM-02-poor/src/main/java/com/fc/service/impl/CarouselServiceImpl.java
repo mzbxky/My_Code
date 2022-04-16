@@ -72,7 +72,7 @@ private CarouselMapper carouselMapper;
         int affectedRows = carouselMapper.updateByPrimaryKeySelective(carousel);
         if(affectedRows>0){
             Carousel result = carouselMapper.selectByPrimaryKey(carousel.getId());
-            resultVo = new ResultVo(200,"轮播图修改成功",true,carousel);
+            resultVo = new ResultVo(200,"轮播图修改成功",true,result);
         }else {
             resultVo = new ResultVo(-1,"修改失败",false,null);
         }

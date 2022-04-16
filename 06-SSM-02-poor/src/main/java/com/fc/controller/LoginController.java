@@ -18,27 +18,40 @@ public class LoginController {
     @Autowired
     private UserMapper userMapper;
     @RequestMapping("login")
-    public ResultVo login(String username, String password){
-        ResultVo resultVo = null;
-//        Map<String ,Object> result = new HashMap<>();
+    public Map<String, Object> login(String username, String password){
         Map<String,Object> claim = new HashMap<>();
-
+        Map<String,Object> map = new HashMap<>();
         User user = userMapper.selectUser(username);
         if (user == null){
-            resultVo = new ResultVo(-1,"用户不存在",false,null);
+
+            map.put("code",-1);
+            map.put("message","用户名不存在");
+            map.put("success",false);
+            map.put("data",null);
+            map.put("time",null);
         }else {
             if(user.getUsername().equals(username) && user.getPassword().equals(password)){
                 String token = JwtUtil.getToken(claim,"qwertyu");
-                resultVo = new ResultVo(200,"登录成功",true,token);
+                Long time = System.currentTimeMillis() + 1000 * 200000;
+                map.put("code",1);
+                map.put("message","登录成功");
+                map.put("success",true);
+                map.put("data",token);
+                map.put("time",time);
 
             }else {
-                resultVo = new ResultVo(-1,"用户名或密码错误",false,null);
+
+                map.put("code",-1);
+                map.put("message","用户名或密码错误");
+                map.put("success",false);
+                map.put("data",null);
+                map.put("time",null);
             }
         }
-        return resultVo;
+        return map;
     }
-    @RequestMapping("add")
-    public ResultVo add(String token){
+    @RequestMapping("verify")
+    public ResultVo verify(String token){
         ResultVo resultVo;
         Map<String,Object> map = JwtUtil.verify(token,"qwertyu");
         Boolean success = (Boolean) map.get("success");

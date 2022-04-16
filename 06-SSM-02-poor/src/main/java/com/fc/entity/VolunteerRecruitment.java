@@ -1,11 +1,13 @@
 package com.fc.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class VolunteerRecruitment implements Serializable {
     private Long id;
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     private Date createTime;
 
     private String total;
@@ -19,9 +21,9 @@ public class VolunteerRecruitment implements Serializable {
     private String workTime;
 
     private Integer recruitsNum;
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     private Date recruitsTime;
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     private Date recruitsEndTime;
 
     private String lead;
@@ -29,9 +31,9 @@ public class VolunteerRecruitment implements Serializable {
     private String contact;
 
     private String picture;
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     private Date releaseDate;
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     private Date lastClickTime;
 
     private Integer clickNum;
@@ -45,7 +47,7 @@ public class VolunteerRecruitment implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     public Date getCreateTime() {
         return createTime;
     }
@@ -101,7 +103,7 @@ public class VolunteerRecruitment implements Serializable {
     public void setRecruitsNum(Integer recruitsNum) {
         this.recruitsNum = recruitsNum;
     }
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     public Date getRecruitsTime() {
         return recruitsTime;
     }
@@ -109,7 +111,7 @@ public class VolunteerRecruitment implements Serializable {
     public void setRecruitsTime(Date recruitsTime) {
         this.recruitsTime = recruitsTime;
     }
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     public Date getRecruitsEndTime() {
         return recruitsEndTime;
     }
@@ -141,7 +143,7 @@ public class VolunteerRecruitment implements Serializable {
     public void setPicture(String picture) {
         this.picture = picture == null ? null : picture.trim();
     }
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     public Date getReleaseDate() {
         return releaseDate;
     }
@@ -149,7 +151,7 @@ public class VolunteerRecruitment implements Serializable {
     public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
     }
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     public Date getLastClickTime() {
         return lastClickTime;
     }

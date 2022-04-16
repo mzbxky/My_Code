@@ -1,8 +1,8 @@
 package com.fc.service.impl;
 
-import com.fc.controller.FileController;
 import com.fc.dao.UserMapper;
 import com.fc.entity.User;
+import com.fc.entity.UserExample;
 import com.fc.service.UserService;
 import com.fc.vo.DataVo;
 import com.fc.vo.ResultVo;
@@ -20,31 +20,44 @@ public class UserServiceImpl implements UserService {
     @Autowired
 private UserMapper userMapper;
     @Override
-    public ResultVo getList(Integer pageNo, Integer pageSize,Long id,String username,String name) {
+    public ResultVo getList(Integer pageNo, Integer pageSize,String info ,String search,Long id) {
         List<User> users = null;
         ResultVo resultVo = new ResultVo();
         try {
-            if(id == null){
-                PageHelper.startPage(pageNo,pageSize);
-                users = userMapper.selectByExample(null);
-            }else if (id != null){
+            if (id == null) {
+                PageHelper.startPage(pageNo, pageSize);
+
+                UserExample userExample = new UserExample();
+
+                UserExample.Criteria criteria = userExample.createCriteria();
+
+                if (info.equals("name")) {
+                    criteria.andNameLike("%" + search + "%");
+                }
+
+                if (info.equals("username")) {
+                    criteria.andUsernameLike("%" + search + "%");
+                }
+
+//                if (param.getGender() != null) {
+//                    criteria.andGenderEqualTo(param.getGender());
+//                }
+
+
+                users = userMapper.selectByExample(userExample);
+            } else {
                 User user = userMapper.selectByPrimaryKey(id);
                 users = new ArrayList<>();
                 users.add(user);
-            }else if(username != null){
-
-            }else if(name != null){
-
             }
+
             PageInfo<User> pageInfo = new PageInfo<>(users);
 
-            DataVo<User> dataVo = new DataVo<>(pageInfo.getTotal(),users,pageNo,pageSize);
+            DataVo<User> dataVO = new DataVo<>(pageInfo.getTotal(), users, pageNo, pageSize);
 
-            resultVo = new ResultVo(200,"查询成功",true,dataVo);
-
-        }catch (Exception e){
-            resultVo = new ResultVo(-400,"查询失败",false,null);
-
+            resultVo = new ResultVo(200, "OK", true, dataVO);
+        } catch (Exception e) {
+            resultVo = new ResultVo(-1000, "fail", false, null);
         }
 
         return resultVo;
@@ -77,7 +90,6 @@ private UserMapper userMapper;
 
     @Override
     public ResultVo addUser(User user) {
-        FileController fileController = null;
         ResultVo resultVo;
         if(user.getCreateTime() == null){
             user.setCreateTime(new Date());

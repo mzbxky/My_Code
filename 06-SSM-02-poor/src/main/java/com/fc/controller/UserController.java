@@ -36,9 +36,9 @@ public ResultVo deleteUser(Long id){
 
     public ResultVo getList(@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                             @RequestParam(value = "pageSize",defaultValue = "1") Integer pageSize,
-                            Long id,String username,String name){
+                            String info ,String search,Long id){
 
-        return userService.getList(pageNum,pageSize,id,username,name);
+        return userService.getList(pageNum,pageSize,info,search,id);
     }
 
 

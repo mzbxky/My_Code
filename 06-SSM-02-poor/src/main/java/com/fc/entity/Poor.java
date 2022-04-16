@@ -1,11 +1,13 @@
 package com.fc.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class Poor implements Serializable {
     private Long id;
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     private Date createTime;
 
     private String sn;
@@ -25,7 +27,7 @@ public class Poor implements Serializable {
     private String name;
 
     private String audit;
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     private Date lastClickTime;
 
     private Integer clickNum;
@@ -37,7 +39,7 @@ public class Poor implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     public Date getCreateTime() {
         return createTime;
     }
@@ -117,7 +119,7 @@ public class Poor implements Serializable {
     public void setAudit(String audit) {
         this.audit = audit == null ? null : audit.trim();
     }
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     public Date getLastClickTime() {
         return lastClickTime;
     }
