@@ -13,6 +13,7 @@
     $(function () {
         // 从本地存储中获取token
         var token = localStorage.getItem("token");
+
         if (token === null) {
             alert("token不存在，请重新登录");
             $(location).attr('href', "/login.html");
@@ -27,6 +28,7 @@
                         $("#username").text(resp.data.username);
                     } else {
                         alert(resp.message);
+
                         $(location).attr('href', "/login.html");
                     }
                 }

@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>主页</title>
-    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="./js/jquery-1.8.3.min.js"></script>
 </head>
 <body>
 <h1 align="center" style="color: yellowgreen"><span id="username"></span>登录成功</h1>
