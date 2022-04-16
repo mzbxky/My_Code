@@ -1,11 +1,13 @@
 package com.fc.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class Collection implements Serializable {
     private Long id;
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     private Date createTime;
 
     private Long userId;
@@ -29,7 +31,7 @@ public class Collection implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-
+    @JsonFormat(pattern = "yyyy年MM月dd日 HH时mm分ss秒")
     public Date getCreateTime() {
         return createTime;
     }
