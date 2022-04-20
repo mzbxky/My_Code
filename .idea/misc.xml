@@ -23,9 +23,12 @@
     <file type="web" url="file://$PROJECT_DIR$/06-SSM-01-Wyy-02" />
     <file type="web" url="file://$PROJECT_DIR$/06-SSM-02-poor" />
     <file type="web" url="file://$PROJECT_DIR$/06-SSM-02-poor -02" />
+    <file type="web" url="file://$PROJECT_DIR$/06-SSM-02-TwoPoor" />
+    <file type="web" url="file://$PROJECT_DIR$/06-SSM-03-Diary" />
     <file type="web" url="file://$PROJECT_DIR$/07-JWT-00-Session-Cookie" />
     <file type="web" url="file://$PROJECT_DIR$/07-JWT-02-Web" />
     <file type="web" url="file://$PROJECT_DIR$/07-JWT-03-Interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/07-JWT-04-CustomJwt" />
     <file type="web" url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb" />
     <file type="web" url="file://$PROJECT_DIR$/aa" />
   </component>
@@ -99,6 +102,13 @@
         <option value="$PROJECT_DIR$/07-JWT-02-Web/pom.xml" />
         <option value="$PROJECT_DIR$/07-JWT-03-Interceptor/pom.xml" />
         <option value="$PROJECT_DIR$/02-MyBatis-00JDBC/pom.xml" />
+        <option value="$PROJECT_DIR$/07-JWT-04-CustomJwt/pom.xml" />
+        <option value="$PROJECT_DIR$/06-SSM-03-Diary/pom.xml" />
+        <option value="$PROJECT_DIR$/06-SSM-02-aaa/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-00-Starter/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-01-Starter/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-02-Starter/pom.xml" />
+        <option value="$PROJECT_DIR$/06-SSM-02-TwoPoor/pom.xml" />
       </list>
     </option>
   </component>

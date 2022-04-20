@@ -117,8 +117,12 @@
     <file url="file://$PROJECT_DIR$/06-SSM-01-Wyy-02/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/06-SSM-01-Wyy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/06-SSM-01-Wyy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-SSM-02-TwoPoor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-SSM-02-TwoPoor/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/06-SSM-02-poor/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/06-SSM-02-poor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-SSM-03-Diary/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-SSM-03-Diary/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07-JWT-00-Session-Cookie/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07-JWT-00-Session-Cookie/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07-JWT-01-Start/src/main/java" charset="UTF-8" />
@@ -127,6 +131,11 @@
     <file url="file://$PROJECT_DIR$/07-JWT-02-Web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07-JWT-03-Interceptor/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07-JWT-03-Interceptor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-JWT-04-CustomJwt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-JWT-04-CustomJwt/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-00-Starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-01-Starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-02-Starter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
