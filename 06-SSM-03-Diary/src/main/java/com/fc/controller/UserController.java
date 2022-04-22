@@ -7,6 +7,7 @@ import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -61,7 +62,8 @@ public void login(HttpServletRequest req, HttpServletResponse resp) throws Servl
         return userService.update(user,img);
     }
     @GetMapping("logout")
-    public void logout(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
+    public ModelAndView logout(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
+        ModelAndView mv = null;
         //获取session
         HttpSession session = req.getSession(false);
         String path = null;
@@ -72,12 +74,13 @@ public void login(HttpServletRequest req, HttpServletResponse resp) throws Servl
             Cookie cookie = new Cookie("JSESSIONID","");
             cookie.setMaxAge(0);
             resp.addCookie(cookie);
-            req.getRequestDispatcher("/login.jsp").forward(req, resp);
+//            req.getRequestDispatcher("/login.jsp").forward(req, resp);
+            mv.setViewName("/login.jsp");
 
         }else {
             resp.getWriter().print("未登录不可执行此操作");
         }
-
+ return mv;
     }
 
 }
