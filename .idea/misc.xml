@@ -105,7 +105,6 @@
         <option value="$PROJECT_DIR$/07-JWT-04-CustomJwt/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-03-Diary/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-02-aaa/pom.xml" />
-        <option value="$PROJECT_DIR$/08-SpringBoot-00-Starter/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-01-Starter/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-02-Starter/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-02-TwoPoor/pom.xml" />
@@ -116,6 +115,7 @@
         <option value="$PROJECT_DIR$/08-SpringBoot-07-JSP/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-08-JdbcTemplate/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-09-MyBatis/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-00-Starter/pom.xml" />
       </list>
     </option>
   </component>
