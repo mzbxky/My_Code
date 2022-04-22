@@ -87,7 +87,6 @@ public class DynamicSQLTest {
         for (Student temp : students) {
             System.out.println(temp);
         }
-
         MyBatisUtil.commit();
     }
 
@@ -113,6 +112,4 @@ public class DynamicSQLTest {
 
         MyBatisUtil.commit();
     }
-
-
 }

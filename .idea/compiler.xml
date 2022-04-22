@@ -33,14 +33,17 @@
         <module name="06-SSM-01-Wyy-02" />
         <module name="03-Spring-00-ThirdLayerApplication-01-Web" />
         <module name="03-Spring-09-AOP-02-Annotation" />
+        <module name="08-SpringBoot-08-JdbcTemplate" />
         <module name="03-Spring-01-Start" />
         <module name="03-Spring-09-AOP-01-XML-Start" />
         <module name="05-SpringMVC-05-Date" />
         <module name="03-Spring-07-DI-05-Annotation" />
         <module name="08-SpringBoot-01-Starter" />
+        <module name="08-SpringBoot-07-JSP" />
         <module name="02-MyBatis-01-Start" />
         <module name="05-SpringMVC-02-RequestMapping" />
         <module name="02-MyBatis-12-Multi-Table" />
+        <module name="08-SpringBoot-06-StaticResource" />
         <module name="03-Spring-09-AOP-00-Start" />
         <module name="03-Spring-07-DI-02-Set" />
         <module name="02-MyBatis-15-PageHelper" />
@@ -54,6 +57,7 @@
         <module name="03-Spring-02-Bean-Name" />
         <module name="05-SpringMVC-08-OtherAnnotation" />
         <module name="06-SSM-01-Wyy" />
+        <module name="08-SpringBoot-09-MyBatis" />
         <module name="06-SSM-02-poor" />
         <module name="07-JWT-03-Interceptor" />
         <module name="05-SpringMVC-11-FileDownload" />
@@ -72,9 +76,11 @@
         <module name="03-Spring-10-Thransaction-01-Programming" />
         <module name="07-JWT-00-Session-Cookie" />
         <module name="05-SpringMVC-04-Encoding" />
+        <module name="08-SpringBoot-04-Annotation" />
         <module name="05-SpringMVC-03-Param" />
         <module name="02-MyBatis-07-Log" />
         <module name="05-SpringMVC-10-FileUpload" />
+        <module name="08-SpringBoot-05-Conditional" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -150,6 +156,14 @@
       <module name="08-SpringBoot-00-Starter" target="1.8" />
       <module name="08-SpringBoot-01-Starter" target="1.8" />
       <module name="08-SpringBoot-02-Starter" target="1.8" />
+      <module name="08-SpringBoot-03-Profile" target="1.8" />
+      <module name="08-SpringBoot-03-Profile-02" target="1.8" />
+      <module name="08-SpringBoot-04-Annotation" target="1.8" />
+      <module name="08-SpringBoot-05-Conditional" target="1.8" />
+      <module name="08-SpringBoot-06-StaticResource" target="1.8" />
+      <module name="08-SpringBoot-07-JSP" target="1.8" />
+      <module name="08-SpringBoot-08-JdbcTemplate" target="1.8" />
+      <module name="08-SpringBoot-09-MyBatis" target="1.8" />
       <module name="0999-observer" target="1.8" />
       <module name="_01ThirdLayerApplicationWeb" target="1.8" />
       <module name="_05-SpringMVC-02-RequestMapping" target="1.8" />
@@ -164,6 +178,14 @@
       <module name="08-SpringBoot-00-Starter" options="-parameters" />
       <module name="08-SpringBoot-01-Starter" options="-parameters" />
       <module name="08-SpringBoot-02-Starter" options="-parameters" />
+      <module name="08-SpringBoot-03-Profile" options="-parameters" />
+      <module name="08-SpringBoot-03-Profile-02" options="-parameters" />
+      <module name="08-SpringBoot-04-Annotation" options="-parameters" />
+      <module name="08-SpringBoot-05-Conditional" options="-parameters" />
+      <module name="08-SpringBoot-06-StaticResource" options="-parameters" />
+      <module name="08-SpringBoot-07-JSP" options="-parameters" />
+      <module name="08-SpringBoot-08-JdbcTemplate" options="-parameters" />
+      <module name="08-SpringBoot-09-MyBatis" options="-parameters" />
     </option>
   </component>
 </project>

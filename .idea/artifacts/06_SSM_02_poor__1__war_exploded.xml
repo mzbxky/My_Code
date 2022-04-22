@@ -44,6 +44,9 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.3" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.3" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.15" />
+          <element id="archive" name="_06-SSM-02-poor-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="06-SSM-02-poor" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">

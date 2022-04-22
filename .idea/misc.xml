@@ -109,6 +109,13 @@
         <option value="$PROJECT_DIR$/08-SpringBoot-01-Starter/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-02-Starter/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-02-TwoPoor/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-03-Profile/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-04-Annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-06-StaticResource/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-05-Conditional/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-07-JSP/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-08-JdbcTemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-09-MyBatis/pom.xml" />
       </list>
     </option>
   </component>

@@ -70,6 +70,13 @@
       <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-00-Starter/08-SpringBoot-00-Starter.iml" filepath="$PROJECT_DIR$/08-SpringBoot-00-Starter/08-SpringBoot-00-Starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-01-Starter/08-SpringBoot-01-Starter.iml" filepath="$PROJECT_DIR$/08-SpringBoot-01-Starter/08-SpringBoot-01-Starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-02-Starter/08-SpringBoot-02-Starter.iml" filepath="$PROJECT_DIR$/08-SpringBoot-02-Starter/08-SpringBoot-02-Starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-03-Profile/08-SpringBoot-03-Profile.iml" filepath="$PROJECT_DIR$/08-SpringBoot-03-Profile/08-SpringBoot-03-Profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-04-Annotation/08-SpringBoot-04-Annotation.iml" filepath="$PROJECT_DIR$/08-SpringBoot-04-Annotation/08-SpringBoot-04-Annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-05-Conditional/08-SpringBoot-05-Conditional.iml" filepath="$PROJECT_DIR$/08-SpringBoot-05-Conditional/08-SpringBoot-05-Conditional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-06-StaticResource/08-SpringBoot-06-StaticResource.iml" filepath="$PROJECT_DIR$/08-SpringBoot-06-StaticResource/08-SpringBoot-06-StaticResource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-07-JSP/08-SpringBoot-07-JSP.iml" filepath="$PROJECT_DIR$/08-SpringBoot-07-JSP/08-SpringBoot-07-JSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-08-JdbcTemplate/08-SpringBoot-08-JdbcTemplate.iml" filepath="$PROJECT_DIR$/08-SpringBoot-08-JdbcTemplate/08-SpringBoot-08-JdbcTemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-09-MyBatis/08-SpringBoot-09-MyBatis.iml" filepath="$PROJECT_DIR$/08-SpringBoot-09-MyBatis/08-SpringBoot-09-MyBatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb/_01ThirdLayerApplicationWeb.iml" filepath="$PROJECT_DIR$/_01ThirdLayerApplicationWeb/_01ThirdLayerApplicationWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dev01.iml" filepath="$PROJECT_DIR$/.idea/dev01.iml" />
     </modules>
