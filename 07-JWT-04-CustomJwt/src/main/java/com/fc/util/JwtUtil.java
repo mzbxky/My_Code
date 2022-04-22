@@ -14,7 +14,7 @@ import java.util.Map;
 public class JwtUtil {
     // 获取token
     public static String getToken(Map<String, Object> claim, String salt) {
-        claim.put("exp", System.currentTimeMillis() + 1000 * 20);
+        claim.put("exp", System.currentTimeMillis() + 1000 * 20000);
         claim.put("iat", System.currentTimeMillis());
 
         // 未编码的头部
