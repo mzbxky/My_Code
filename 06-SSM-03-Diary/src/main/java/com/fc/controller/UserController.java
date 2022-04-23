@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.*;
 import java.io.IOException;
 
@@ -18,6 +21,7 @@ import java.io.IOException;
 public class UserController extends HttpServlet {
     @Autowired
     private UserService userService;
+
     @Autowired
     private TbUserMapper tbUserMapper;
     @GetMapping("delete")
@@ -31,56 +35,35 @@ public class UserController extends HttpServlet {
 
 
 //@Override
-@RequestMapping("login")
-public void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    req.setCharacterEncoding("UTF-8");
-
-    String username = req.getParameter("username");
-    String password = req.getParameter("password");
-    TbUser user = tbUserMapper.selectUser(username);
-    if(user==null){
-
-    }else {
-        HttpSession session = req.getSession(true);
-
-        session.setAttribute("username", username);
-
-        Cookie cookie = new Cookie("JSESSIONID", session.getId());
-
-        cookie.setMaxAge(30);
-
-        resp.addCookie(cookie);
-
-        req.getRequestDispatcher("/index.jsp").forward(req, resp);
-    }
-
-
+    @PostMapping("login")
+public ResultVo login(String username, String password, Number number, HttpServletRequest req, HttpServletResponse resp){
+        return userService.login(username,password,number,req, resp);
 }
 
-@RequestMapping("update")
+    @RequestMapping("update")
     public ResultVo update(@RequestBody TbUser user, @RequestBody MultipartFile img){
         return userService.update(user,img);
     }
     @GetMapping("logout")
-    public ModelAndView logout(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
-        ModelAndView mv = null;
+    public ModelAndView loginOut(ModelAndView mv,HttpServletRequest req,HttpServletResponse resp){
         //获取session
         HttpSession session = req.getSession(false);
-        String path = null;
         if (session!=null){
             //移除
             session.removeAttribute("user");
-            //
+
             Cookie cookie = new Cookie("JSESSIONID","");
             cookie.setMaxAge(0);
             resp.addCookie(cookie);
-//            req.getRequestDispatcher("/login.jsp").forward(req, resp);
             mv.setViewName("/login.jsp");
-
         }else {
-            resp.getWriter().print("未登录不可执行此操作");
+            try {
+                resp.getWriter().print("未登录不可执行此操作");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
- return mv;
-    }
+    return mv;
+}
 
 }

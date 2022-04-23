@@ -9,6 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,6 +23,51 @@ public class UserServiceImpl implements UserService {
     @Autowired
     TbUserMapper tbUserMapper;
 
+
+    @Override
+    public ResultVo login(String username, String password, Number number, HttpServletRequest req, HttpServletResponse resp) {
+            TbUser user = tbUserMapper.selectUser(username);
+            ResultVo resultVo = null;
+            //说名该用户存在
+            if (user!=null){
+                //用户名与密码一致
+                if (password.equals(user.getPassword())){
+                    //获取session
+                    HttpSession session = req.getSession(true);
+                    //将登录信息存储到session中
+
+                    session.setAttribute("user",user);
+
+                    //准备jsessionid对应的cookie
+                    Cookie cookie = new Cookie("JSESSIONID",session.getId());
+
+                    if (number!=null){
+                        //设置cookie过期时间
+
+                        cookie.setMaxAge(60*30);
+
+                        resp.addCookie(cookie);
+
+                    }else {
+                        //设置cookie过期时间
+                        cookie.setMaxAge(-1);
+                    }
+
+                    resultVo = new ResultVo(200,"登录成功",true,null);
+                    try {
+                        req.getRequestDispatcher("/index.jsp").forward(req, resp);
+
+                    } catch (IOException | ServletException e) {
+                        e.printStackTrace();
+                    }
+                }else {
+                    resultVo = new ResultVo(-1,"登录失败，用户名或密码错误",false,null);
+                }
+            }else {
+                resultVo = new ResultVo(-1,"登录失败，用户名或密码错误",false,null);
+            }
+        return resultVo;
+    }
 
     @Override
     public ResultVo delete(Integer id) {

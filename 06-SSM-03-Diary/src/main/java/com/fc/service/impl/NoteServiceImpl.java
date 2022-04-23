@@ -23,13 +23,13 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public ResultVo addOrUpdate(Integer id) {
-        TbNote tbNote = tbNoteMapper.addOrUpdate(id);
-        if(tbNote == null){
-            resultVo = new ResultVo(-1,"该日记不存在",false,null);
-        }
-        resultVo = new ResultVo(1,"查询成功",true,tbNote);
-        System.out.println(tbNote);
+    public ResultVo addOrUpdate(TbNote tbNote) {
+//        TbNote tbNote = tbNoteMapper.addOrUpdate(id);
+//        if(tbNote == null){
+//            resultVo = new ResultVo(-1,"该日记不存在",false,null);
+//        }
+//        resultVo = new ResultVo(1,"查询成功",true,tbNote);
+//        System.out.println(tbNote);
         return resultVo;
     }
 }

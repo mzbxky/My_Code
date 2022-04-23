@@ -1,5 +1,6 @@
 package com.fc.controller;
 
+import com.fc.entity.TbNote;
 import com.fc.service.NoteService;
 import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class NoteController {
         return noteService.delete(id);
     }
     @GetMapping("addOrUpdate")
-    public ResultVo addOrUpdate(Integer id){
-        return noteService.addOrUpdate(id);
+    public ResultVo addOrUpdate(TbNote note){
+        return noteService.addOrUpdate(note);
     }
 }
