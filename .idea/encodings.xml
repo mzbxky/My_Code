@@ -143,6 +143,18 @@
     <file url="file://$PROJECT_DIR$/08-SpringBoot-07-JSP/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/08-SpringBoot-08-JdbcTemplate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/08-SpringBoot-09-MyBatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-10-RESTful/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-11-Exception/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-12-Filter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-13-Interceptor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-14-FileUpload/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-15-CrossOrigin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-16-I18n/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-17-Junit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-18-Junit5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-19-Mail/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-20-Devtools/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-SpringBoot-21-Jasypt/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

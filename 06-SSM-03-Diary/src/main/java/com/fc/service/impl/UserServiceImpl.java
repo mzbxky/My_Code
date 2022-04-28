@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public ResultVo login(String username, String password, Number number, HttpServletRequest req, HttpServletResponse resp) {
+    public ResultVo login(String username, String password, int remember, HttpServletRequest req, HttpServletResponse resp) {
             TbUser user = tbUserMapper.selectUser(username);
             ResultVo resultVo = null;
             //说名该用户存在
@@ -41,7 +41,8 @@ public class UserServiceImpl implements UserService {
                     //准备jsessionid对应的cookie
                     Cookie cookie = new Cookie("JSESSIONID",session.getId());
 
-                    if (number!=null){
+                    if (remember == 1){
+
                         //设置cookie过期时间
 
                         cookie.setMaxAge(60*30);
@@ -49,6 +50,7 @@ public class UserServiceImpl implements UserService {
                         resp.addCookie(cookie);
 
                     }else {
+                        System.out.println(remember+"在这里");
                         //设置cookie过期时间
                         cookie.setMaxAge(-1);
                     }

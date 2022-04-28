@@ -36,8 +36,8 @@ public class UserController extends HttpServlet {
 
 //@Override
     @PostMapping("login")
-public ResultVo login(String username, String password, Number number, HttpServletRequest req, HttpServletResponse resp){
-        return userService.login(username,password,number,req, resp);
+public ResultVo login(String username, String password,  int remember, HttpServletRequest req, HttpServletResponse resp){
+        return userService.login(username,password,remember,req, resp);
 }
 
     @RequestMapping("update")
@@ -65,5 +65,17 @@ public ResultVo login(String username, String password, Number number, HttpServl
         }
     return mv;
 }
-
+@RequestMapping("automatic")
+public ModelAndView automatic(ModelAndView mv,HttpServletRequest req,HttpServletResponse resp) {
+    //获取session
+    HttpSession session = req.getSession(false);
+    // 如果说session为空，说明没有登录
+    if (session == null||null==session.getAttribute("user")) {
+        System.out.println(session.getAttribute("user")+"session的东西");
+        mv.setViewName("/login.jsp");
+    }else {
+        mv.setViewName("/index.jsp");
+    }
+    return mv;
+}
 }

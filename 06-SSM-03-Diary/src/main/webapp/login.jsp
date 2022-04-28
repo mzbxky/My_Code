@@ -66,6 +66,15 @@
     </div>
 </div>
 </body>
-
+<script>
+    $.ajax({
+        url:"user/automatic",
+        type:"post",
+        data:null,
+        success: function (resp) {
+            alert("执行了");
+        }
+    })
+</script>
 </html>
 

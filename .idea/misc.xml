@@ -105,17 +105,29 @@
         <option value="$PROJECT_DIR$/07-JWT-04-CustomJwt/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-03-Diary/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-02-aaa/pom.xml" />
-        <option value="$PROJECT_DIR$/08-SpringBoot-01-Starter/pom.xml" />
-        <option value="$PROJECT_DIR$/08-SpringBoot-02-Starter/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-02-TwoPoor/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-03-Profile/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-04-Annotation/pom.xml" />
-        <option value="$PROJECT_DIR$/08-SpringBoot-06-StaticResource/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-05-Conditional/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-07-JSP/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-08-JdbcTemplate/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-09-MyBatis/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-00-Starter/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-10-RESTful/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-11-Exception/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-12-Filter/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-13-Interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-01-Starter/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-02-Starter/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-14-FileUpload/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-15-CrossOrigin/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-16-l18n/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-16-I18n/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-19-Mail/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-21-Jasypt/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-17-Junit/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-18-Junit5/pom.xml" />
+        <option value="$PROJECT_DIR$/08-SpringBoot-20-Devtools/pom.xml" />
       </list>
     </option>
   </component>

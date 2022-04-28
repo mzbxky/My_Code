@@ -12,6 +12,7 @@
         <module name="03-Spring-07-DI-04-Annotation" />
         <module name="07-JWT-04-CustomJwt" />
         <module name="07-JWT-01-Start" />
+        <module name="08-SpringBoot-17-Junit" />
         <module name="05-SpringMVC-01-Start" />
         <module name="02-MyBatis-00JDBC" />
         <module name="03-Spring-08-JDBC-02-Annotation" />
@@ -31,8 +32,11 @@
         <module name="02-MyBatis-11-ORM" />
         <module name="02-MyBatis-18-Lazy" />
         <module name="06-SSM-01-Wyy-02" />
+        <module name="08-SpringBoot-10-RESTful" />
         <module name="03-Spring-00-ThirdLayerApplication-01-Web" />
+        <module name="08-springboot-18-junit5" />
         <module name="03-Spring-09-AOP-02-Annotation" />
+        <module name="08-springboot-19-mail" />
         <module name="08-SpringBoot-08-JdbcTemplate" />
         <module name="03-Spring-01-Start" />
         <module name="03-Spring-09-AOP-01-XML-Start" />
@@ -43,7 +47,9 @@
         <module name="02-MyBatis-01-Start" />
         <module name="05-SpringMVC-02-RequestMapping" />
         <module name="02-MyBatis-12-Multi-Table" />
-        <module name="08-SpringBoot-06-StaticResource" />
+        <module name="08-SpringBoot-15-CorssOrigin" />
+        <module name="08-SpringBoot-14-FileUpload" />
+        <module name="08-SpringBoot-19-Mail" />
         <module name="03-Spring-09-AOP-00-Start" />
         <module name="03-Spring-07-DI-02-Set" />
         <module name="02-MyBatis-15-PageHelper" />
@@ -53,6 +59,7 @@
         <module name="02-MyBatis-10-Util" />
         <module name="03-Spring-03-Create" />
         <module name="02-MyBatis-09-CRUD" />
+        <module name="08-SpringBoot-12-Filter" />
         <module name="07-JWT-02-Web" />
         <module name="03-Spring-02-Bean-Name" />
         <module name="05-SpringMVC-08-OtherAnnotation" />
@@ -68,16 +75,22 @@
         <module name="03-Spring-10-Transaction-04-Propagate" />
         <module name="08-SpringBoot-02-Starter" />
         <module name="03-Spring-07-DI-01-Constructor" />
+        <module name="08-SpringBoot-16-I18n" />
         <module name="02-MyBatis-06-Alias" />
         <module name="03-Spring-10-Thransaction-02-XML" />
         <module name="05-SpringMVC-13-ControllerAdvice" />
         <module name="02-MyBatis-16-Druid" />
         <module name="05-SpringMVC-12-Exception" />
+        <module name="08-SpringBoot-11-Exception" />
         <module name="03-Spring-10-Thransaction-01-Programming" />
         <module name="07-JWT-00-Session-Cookie" />
         <module name="05-SpringMVC-04-Encoding" />
         <module name="08-SpringBoot-04-Annotation" />
         <module name="05-SpringMVC-03-Param" />
+        <module name="08-SpringBoot-21-Jasypt" />
+        <module name="08-SpringBoot-13-Interceptor" />
+        <module name="08-SpringBoot-18-Junit5" />
+        <module name="08-SpringBoot-20-Devtools" />
         <module name="02-MyBatis-07-Log" />
         <module name="05-SpringMVC-10-FileUpload" />
         <module name="08-SpringBoot-05-Conditional" />
@@ -164,6 +177,22 @@
       <module name="08-SpringBoot-07-JSP" target="1.8" />
       <module name="08-SpringBoot-08-JdbcTemplate" target="1.8" />
       <module name="08-SpringBoot-09-MyBatis" target="1.8" />
+      <module name="08-SpringBoot-10-RESTful" target="1.8" />
+      <module name="08-SpringBoot-11-Exception" target="1.8" />
+      <module name="08-SpringBoot-12-Filter" target="1.8" />
+      <module name="08-SpringBoot-13-Interceptor" target="1.8" />
+      <module name="08-SpringBoot-14-FileUpload" target="1.8" />
+      <module name="08-SpringBoot-15-CorssOrigin" target="1.8" />
+      <module name="08-SpringBoot-16-I18n" target="1.8" />
+      <module name="08-SpringBoot-17-Junit" target="1.8" />
+      <module name="08-springboot-17-junit" target="1.8" />
+      <module name="08-springboot-18-junit5" target="1.8" />
+      <module name="08-SpringBoot-18-Junit5" target="1.8" />
+      <module name="08-springboot-19-mail" target="1.8" />
+      <module name="08-SpringBoot-19-Mail" target="1.8" />
+      <module name="08-SpringBoot-20-Devtools" target="1.8" />
+      <module name="08-springboot-21-jasypt" target="1.8" />
+      <module name="08-SpringBoot-21-Jasypt" target="1.8" />
       <module name="0999-observer" target="1.8" />
       <module name="_01ThirdLayerApplicationWeb" target="1.8" />
       <module name="_05-SpringMVC-02-RequestMapping" target="1.8" />
@@ -186,6 +215,21 @@
       <module name="08-SpringBoot-07-JSP" options="-parameters" />
       <module name="08-SpringBoot-08-JdbcTemplate" options="-parameters" />
       <module name="08-SpringBoot-09-MyBatis" options="-parameters" />
+      <module name="08-SpringBoot-10-RESTful" options="-parameters" />
+      <module name="08-SpringBoot-11-Exception" options="-parameters" />
+      <module name="08-SpringBoot-12-Filter" options="-parameters" />
+      <module name="08-SpringBoot-13-Interceptor" options="-parameters" />
+      <module name="08-SpringBoot-14-FileUpload" options="-parameters" />
+      <module name="08-SpringBoot-15-CorssOrigin" options="-parameters" />
+      <module name="08-SpringBoot-16-I18n" options="-parameters" />
+      <module name="08-SpringBoot-17-Junit" options="-parameters" />
+      <module name="08-SpringBoot-18-Junit5" options="-parameters" />
+      <module name="08-SpringBoot-19-Mail" options="-parameters" />
+      <module name="08-SpringBoot-20-Devtools" options="-parameters" />
+      <module name="08-SpringBoot-21-Jasypt" options="-parameters" />
+      <module name="08-springboot-18-junit5" options="-parameters" />
+      <module name="08-springboot-19-mail" options="-parameters" />
+      <module name="08-springboot-21-jasypt" options="-parameters" />
     </option>
   </component>
 </project>
