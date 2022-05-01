@@ -8,13 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="02-MyBatis-08-Bind" />
         <module name="04-DesignPattern-01-Proxy" />
-        <module name="06-SSM-03-Diary" />
         <module name="03-Spring-07-DI-04-Annotation" />
         <module name="07-JWT-04-CustomJwt" />
         <module name="07-JWT-01-Start" />
         <module name="08-SpringBoot-17-Junit" />
         <module name="05-SpringMVC-01-Start" />
         <module name="02-MyBatis-00JDBC" />
+        <module name="09-SpringBoot-01-Diary" />
         <module name="03-Spring-08-JDBC-02-Annotation" />
         <module name="05-SpringMVC-07-ResponseData" />
         <module name="02-MyBatis-13-Dynamic-SQL" />
@@ -28,6 +28,7 @@
         <module name="02-MyBatis-03-Character" />
         <module name="03-Spring-04-Scope" />
         <module name="03-Spring-07-DI-03-ComplexType" />
+        <module name="09-springboot-01-diary" />
         <module name="05-SpringMVC-14-Interceptor" />
         <module name="02-MyBatis-11-ORM" />
         <module name="02-MyBatis-18-Lazy" />
@@ -37,6 +38,7 @@
         <module name="08-springboot-18-junit5" />
         <module name="03-Spring-09-AOP-02-Annotation" />
         <module name="08-springboot-19-mail" />
+        <module name="09-SpringBoot-00-Diary" />
         <module name="08-SpringBoot-08-JdbcTemplate" />
         <module name="03-Spring-01-Start" />
         <module name="03-Spring-09-AOP-01-XML-Start" />
@@ -193,6 +195,10 @@
       <module name="08-SpringBoot-20-Devtools" target="1.8" />
       <module name="08-springboot-21-jasypt" target="1.8" />
       <module name="08-SpringBoot-21-Jasypt" target="1.8" />
+      <module name="09-SpringBoot-00-Diary" target="1.8" />
+      <module name="09-springboot-00-diary" target="1.8" />
+      <module name="09-SpringBoot-01-Diary" target="1.8" />
+      <module name="09-springboot-01-diary" target="1.8" />
       <module name="0999-observer" target="1.8" />
       <module name="_01ThirdLayerApplicationWeb" target="1.8" />
       <module name="_05-SpringMVC-02-RequestMapping" target="1.8" />
@@ -230,6 +236,10 @@
       <module name="08-springboot-18-junit5" options="-parameters" />
       <module name="08-springboot-19-mail" options="-parameters" />
       <module name="08-springboot-21-jasypt" options="-parameters" />
+      <module name="09-SpringBoot-00-Diary" options="-parameters" />
+      <module name="09-SpringBoot-01-Diary" options="-parameters" />
+      <module name="09-springboot-00-diary" options="-parameters" />
+      <module name="09-springboot-01-diary" options="-parameters" />
     </option>
   </component>
 </project>

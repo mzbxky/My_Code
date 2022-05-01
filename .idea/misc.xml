@@ -103,7 +103,6 @@
         <option value="$PROJECT_DIR$/07-JWT-03-Interceptor/pom.xml" />
         <option value="$PROJECT_DIR$/02-MyBatis-00JDBC/pom.xml" />
         <option value="$PROJECT_DIR$/07-JWT-04-CustomJwt/pom.xml" />
-        <option value="$PROJECT_DIR$/06-SSM-03-Diary/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-02-aaa/pom.xml" />
         <option value="$PROJECT_DIR$/06-SSM-02-TwoPoor/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-03-Profile/pom.xml" />
@@ -128,6 +127,7 @@
         <option value="$PROJECT_DIR$/08-SpringBoot-17-Junit/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-18-Junit5/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-20-Devtools/pom.xml" />
+        <option value="$PROJECT_DIR$/09-SpringBoot-01-Diary/pom.xml" />
       </list>
     </option>
   </component>
