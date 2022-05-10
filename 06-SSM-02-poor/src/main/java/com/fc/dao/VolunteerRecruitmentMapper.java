@@ -2,13 +2,10 @@ package com.fc.dao;
 
 import com.fc.entity.VolunteerRecruitment;
 import com.fc.entity.VolunteerRecruitmentExample;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.Date;
-import java.util.List;
-
 public interface VolunteerRecruitmentMapper {
-    int click(@Param("id") Long id, @Param("lastClickTime") Date lastClickTime);
     long countByExample(VolunteerRecruitmentExample example);
 
     int deleteByExample(VolunteerRecruitmentExample example);

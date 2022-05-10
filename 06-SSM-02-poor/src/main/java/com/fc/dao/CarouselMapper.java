@@ -2,15 +2,10 @@ package com.fc.dao;
 
 import com.fc.entity.Carousel;
 import com.fc.entity.CarouselExample;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
 public interface CarouselMapper {
-
-
-   Boolean setState(@Param("id") Long id);
-
     long countByExample(CarouselExample example);
 
     int deleteByExample(CarouselExample example);

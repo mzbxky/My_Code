@@ -2,14 +2,10 @@ package com.fc.dao;
 
 import com.fc.entity.Alleviation;
 import com.fc.entity.AlleviationExample;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.Date;
-import java.util.List;
-
 public interface AlleviationMapper {
-    int click(@Param("lastClickTime") Date lastClickTime,@Param("id") Long id);
-
     long countByExample(AlleviationExample example);
 
     int deleteByExample(AlleviationExample example);
