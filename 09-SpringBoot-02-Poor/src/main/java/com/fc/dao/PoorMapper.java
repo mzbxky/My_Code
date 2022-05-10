@@ -3,10 +3,17 @@ package com.fc.dao;
 import com.fc.entity.Poor;
 import com.fc.entity.PoorExample;
 import com.fc.entity.PoorWithBLOBs;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+import java.util.Date;
+import java.util.List;
+@Repository
 public interface PoorMapper {
+    int click(@Param("id") Long id, @Param("lastClickTime") Date lastClickTime);
+
+
+
     long countByExample(PoorExample example);
 
     int deleteByExample(PoorExample example);
