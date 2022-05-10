@@ -128,6 +128,8 @@
         <option value="$PROJECT_DIR$/08-SpringBoot-18-Junit5/pom.xml" />
         <option value="$PROJECT_DIR$/08-SpringBoot-20-Devtools/pom.xml" />
         <option value="$PROJECT_DIR$/09-SpringBoot-01-Diary/pom.xml" />
+        <option value="$PROJECT_DIR$/09-SpringBoot-02-Poor/pom.xml" />
+        <option value="$PROJECT_DIR$/../11-Thymeleaf-01-Java/pom.xml" />
       </list>
     </option>
   </component>

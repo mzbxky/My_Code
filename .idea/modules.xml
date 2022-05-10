@@ -88,7 +88,9 @@
       <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-21-Jasypt/08-SpringBoot-21-Jasypt.iml" filepath="$PROJECT_DIR$/08-SpringBoot-21-Jasypt/08-SpringBoot-21-Jasypt.iml" />
       <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-18-Junit5/08-springboot-18-junit5.iml" filepath="$PROJECT_DIR$/08-SpringBoot-18-Junit5/08-springboot-18-junit5.iml" />
       <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-06-StaticResource/08-springboot-19-mail.iml" filepath="$PROJECT_DIR$/08-SpringBoot-06-StaticResource/08-springboot-19-mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09-SpringBoot-02-Poor/09-SpringBoot-02-Poor.iml" filepath="$PROJECT_DIR$/09-SpringBoot-02-Poor/09-SpringBoot-02-Poor.iml" />
       <module fileurl="file://$PROJECT_DIR$/09-SpringBoot-01-Diary/09-springboot-01-diary.iml" filepath="$PROJECT_DIR$/09-SpringBoot-01-Diary/09-springboot-01-diary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../11-Thymeleaf-01-Java/11-Thymeleaf-01-Java.iml" filepath="$PROJECT_DIR$/../11-Thymeleaf-01-Java/11-Thymeleaf-01-Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb/_01ThirdLayerApplicationWeb.iml" filepath="$PROJECT_DIR$/_01ThirdLayerApplicationWeb/_01ThirdLayerApplicationWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dev01.iml" filepath="$PROJECT_DIR$/.idea/dev01.iml" />
     </modules>
