@@ -1,6 +1,7 @@
 package com.fc.service;
 
 import com.fc.entity.TbNote;
+import com.fc.entity.TbNoteAndType;
 import com.fc.entity.TbNoteType;
 import com.fc.vo.ResultVo;
 
@@ -13,7 +14,7 @@ public interface NoteService {
 
     List<TbNoteType> selectType(Integer userId);
 
-    TbNote detail(Integer id);
+    TbNoteAndType detail(Integer id);
 
     int add(TbNote tbNote);
 

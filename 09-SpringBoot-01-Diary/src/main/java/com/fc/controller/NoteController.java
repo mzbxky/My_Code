@@ -37,17 +37,17 @@ public class NoteController {
         return mv;
     }
     @GetMapping("detail")
-    @ResponseBody
-    public TbNote detail(@RequestParam("id") Integer id, HttpSession session, ModelAndView mv){
-        TbNote note = noteService.detail(id);
+//    @ResponseBody
+    public ModelAndView detail(@RequestParam("id") Integer id, HttpSession session, ModelAndView mv){
+        TbNoteAndType note = noteService.detail(id);
         session.setAttribute("note",note);
         session.setAttribute("changePage","/note/detail.jsp");
         mv.setViewName("forward:/index.jsp");
-        return note;
+        return mv;
     }
     @PostMapping("addOrUpdate")
     public ModelAndView addOrUpdate(ModelAndView mv,TbNote note,HttpSession session){
-        TbNote noteOne = noteService.detail(note.getId());
+        TbNoteAndType noteOne = noteService.detail(note.getId());
         //添加
         if (noteOne==null){
             int affectedRows = noteService.add(note);

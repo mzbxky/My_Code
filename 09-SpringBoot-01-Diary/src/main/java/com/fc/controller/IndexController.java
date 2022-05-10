@@ -3,6 +3,7 @@ package com.fc.controller;
 import com.fc.entity.TbNote;
 import com.fc.entity.TbUser;
 import com.fc.service.IndexService;
+import com.fc.vo.NoteVO;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
-import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping("index")
@@ -29,33 +30,67 @@ public class IndexController {
                              @RequestParam(value = "pageNum",defaultValue = "1")Integer pageNum,
                              @RequestParam(value = "pageSize",defaultValue = "5")Integer pageSize){
 
+        // 获取域对象中的user
         TbUser user = (TbUser) session.getAttribute("user");
 
-        //获取用户id
+        // 获取用户id
         Integer userId = user.getId();
 
+        // 所有的日记
         PageInfo<TbNote> pageInfo = indexService.page(pageNum, pageSize, userId, id, title, date);
-        mv.addObject("page",pageInfo);
-        mv.addObject("changePage","/note/list.jsp");
+        mv.addObject("page", pageInfo);
+
+        // 获取所有日记的日期分类
+        List<NoteVO> dateInfo = indexService.findDateInfo(userId);
+
+        session.setAttribute("dateInfo", dateInfo);
+
+        // 获取所有日记的类别
+        List<NoteVO> typeInfo = indexService.findTypeInfo(userId);
+        session.setAttribute("typeInfo", typeInfo);
+
+
+        if (id != null) {
+            mv.addObject("typeId", id);
+        }
+
+        if (title != null && !title.equals("")) {
+            mv.addObject("title", title);
+        }
+
+        if (date != null && !date.equals("")) {
+            mv.addObject("date", date);
+        }
+        mv.addObject("changePage", "/note/list.jsp");
+        mv.addObject("menu_page", "index");
+
         mv.setViewName("forward:/index.jsp");
         return mv;
     }
     @GetMapping("searchType")
-    public ModelAndView searchType(ModelAndView mv,Integer id,HttpSession session){
-        session.setAttribute("id",id);
+    public ModelAndView searchType(Integer id, ModelAndView mv) {
+        mv.addObject("id", id);
+
         mv.setViewName("forward:/index/page");
+
         return mv;
     }
+
     @GetMapping("searchTitle")
-        public ModelAndView searchTitle(ModelAndView mv,String title,HttpSession session){
-        session.setAttribute("title",title);
+    public ModelAndView searchTitle(String title, ModelAndView mv) {
+        mv.addObject("title", title);
+
         mv.setViewName("forward:/index/page");
-            return mv;
-        }
+
+        return mv;
+    }
+
     @GetMapping("searchDate")
-    public ModelAndView searchDate(ModelAndView mv, Date date, HttpSession session){
-        session.setAttribute("pubTime",date);
+    public ModelAndView searchDate(String date, ModelAndView mv) {
+        mv.addObject("date", date);
+
         mv.setViewName("forward:/index/page");
+
         return mv;
     }
 

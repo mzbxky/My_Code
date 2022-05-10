@@ -3,6 +3,7 @@ package com.fc.service.impl;
 import com.fc.dao.TbNoteMapper;
 import com.fc.dao.TbNoteTypeMapper;
 import com.fc.entity.TbNote;
+import com.fc.entity.TbNoteAndType;
 import com.fc.entity.TbNoteType;
 import com.fc.entity.TbNoteTypeExample;
 import com.fc.service.NoteService;
@@ -54,8 +55,8 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public TbNote detail(Integer id) {
-        TbNote note = tbNoteMapper.detail(id);
+    public TbNoteAndType detail(Integer id) {
+        TbNoteAndType note = tbNoteMapper.detail(id);
         return note;
     }
 

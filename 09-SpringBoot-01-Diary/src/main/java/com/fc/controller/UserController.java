@@ -5,7 +5,9 @@ import com.fc.service.UserService;
 import com.fc.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.Map;
 
 @Controller
 @RequestMapping("user")
@@ -56,7 +57,7 @@ private UserService userService;
             // 发送到浏览器
             response.addCookie(cookie);
 
-            mv.setViewName("/index.jsp");
+            mv.setViewName("forward:/index/page");
         } else {
             // 登录失败的情况
             mv.addObject("resultInfo", result);
@@ -70,13 +71,13 @@ private UserService userService;
         //获取session
         session = req.getSession(false);
         if (session!=null){
-            //移除
-            session.removeAttribute("user");
+            //销毁session
+            session.invalidate();
 
-            Cookie cookie = new Cookie("JSESSIONID","");
+            Cookie cookie = new Cookie("JSESSIONID",null);
             cookie.setMaxAge(0);
             resp.addCookie(cookie);
-            mv.setViewName("/login.jsp");
+            mv.setViewName("redirect:/login.jsp");
         }else {
             try {
                 resp.getWriter().print("未登录不可执行此操作");
@@ -95,24 +96,34 @@ private UserService userService;
         return mv;
     }
     @PostMapping("update")
-    public ModelAndView update(ModelAndView mv, MultipartFile img,@RequestBody TbUser user){
-        if (img!=null){
-            Map<String,Object> map = file.jsonFileUpload(img);
-            int code = (int) map.get("code");
-           // String path = (String) map.get("data");
-            if (code == 200){
-                mv.setViewName("forward:/user/userCenter");
-            }else {
-                mv.setViewName("forward:/index.jsp");
-            }
-        }else {
-            int affectedRows = userService.update(user);
-            if (affectedRows>0){
-                mv.setViewName("forward:/user/userCenter");
-            }else {
-                mv.setViewName("forward:/index.jsp");
-            }
-        }
+    public ModelAndView update(ModelAndView mv, MultipartFile img,TbUser user,HttpSession session){
+//        if (img!=null){
+//            Map<String,Object> map = file.jsonFileUpload(img);
+//            int code = (int) map.get("code");
+//           // String path = (String) map.get("data");
+//            if (code == 200){
+//                mv.setViewName("forward:/user/userCenter");
+//            }else {
+//                mv.setViewName("forward:/index.jsp");
+//            }
+//        }else {
+//            int affectedRows = userService.update(user);
+//            if (affectedRows>0){
+//                mv.setViewName("forward:/user/userCenter");
+//            }else {
+//                mv.setViewName("forward:/index.jsp");
+//            }
+//        }
+        TbUser contextUser = (TbUser) session.getAttribute("user");
+
+        // 一定要把id给传递过来
+        user.setId(contextUser.getId());
+
+        ResultVo vo = userService.update(img, user);
+
+        session.setAttribute("user", vo.getData());
+
+        mv.setViewName("redirect:userCenter");
         return mv;
     }
     @GetMapping("checkNick")

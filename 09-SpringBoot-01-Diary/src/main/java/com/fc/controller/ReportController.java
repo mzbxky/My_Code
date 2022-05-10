@@ -32,4 +32,21 @@ public class ReportController {
         mv.setViewName("forward:/index.jsp");
         return mv;
     }
+//    @GetMapping("month")
+//    @ResponseBody
+//    public ResultVo getMonth(HttpSession session) {
+//        TbUser user = (TbUser) session.getAttribute("user");
+//
+//        Map<String, Object> data = reportService.getMonth(user.getId());
+//
+//        ResultVo vo = new ResultVo();
+//
+//        if (data != null) {
+//            vo.setData(data);
+//            vo.setCode(1);
+//        }
+//
+//        return vo;
+//    }
+
 }
