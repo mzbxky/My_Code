@@ -13,17 +13,14 @@ public class CustomInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession(false);
-        TbUser tbUser = (TbUser) session.getAttribute("user");
         try {
+            TbUser tbUser = (TbUser) session.getAttribute("user");
             if (tbUser!=null){
                 return true;
             }
-            response.sendRedirect(request.getContextPath() + "login.jsp");
         }catch (Exception e) {
             e.printStackTrace();
         }
         return false;
     }
-
-
 }

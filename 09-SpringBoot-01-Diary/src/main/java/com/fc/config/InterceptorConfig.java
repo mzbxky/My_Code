@@ -11,6 +11,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         // 将拦截器注入到容器中
         registry.addInterceptor(new CustomInterceptor())
+
                 .order(-1)
                 .addPathPatterns("/**")
 

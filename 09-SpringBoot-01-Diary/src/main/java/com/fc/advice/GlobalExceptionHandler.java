@@ -38,7 +38,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public ResultVo handleRuntimeException(RuntimeException e){
         System.out.println(e);
-        return new ResultVo(4004,"操作有问题，不会用哥教你",false,e.getMessage());
+        return new ResultVo(4004,"操作有问题，不会哥教你",false,e.getMessage());
     }
 
 
