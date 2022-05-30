@@ -5,32 +5,32 @@
 <!--映射文件，namespace命名空间：对应一个完全的全限定名，必须和对应的接口的路径相匹配-->
 <mapper namespace="com.fc.dao.StudentDao">
 <!--    查询小于指定值的学生-->
-<!--    <select id="findLessThanAge" parameterType="Integer" resultType="com.fc.entity.Student">-->
+<!--    <select id="findLessThanAge" parameterType="Integer" resultType="com.fc.entity.User">-->
 <!--        select * from student where age &lt;= #{age}-->
 <!--    </select>-->
-<!--    <select id="findLessThanAge" parameterType="Integer" resultType="com.fc.entity.Student">-->
+<!--    <select id="findLessThanAge" parameterType="Integer" resultType="com.fc.entity.User">-->
 <!--        select * from student where age &lt;=#{age}-->
 <!--    </select>-->
-<!--    <select id="findLessThanAge" parameterType="Integer" resultType="com.fc.entity.Student">-->
+<!--    <select id="findLessThanAge" parameterType="Integer" resultType="com.fc.entity.User">-->
 <!--        select * from student where age &lt;=#{age}-->
 <!--    </select>-->
-    <select id="findLessThanAge" parameterType="Integer" resultType="com.fc.entity.Student">
+    <select id="findLessThanAge" parameterType="Integer" resultType="com.fc.entity.User">
         select * from student where age &lt;=#{age}
     </select>
 <!--查询大于指定值的学生-->
-<!--    <select id="findGreaterThanAge" parameterType="Integer" resultType="com.fc.entity.Student">-->
+<!--    <select id="findGreaterThanAge" parameterType="Integer" resultType="com.fc.entity.User">-->
 <!--        select * from student where age <![CDATA[>]]> #{age}-->
 <!--    </select>-->
-<!--    <select id="findGreaterThanAge" parameterType="Integer" resultType="com.fc.entity.Student">-->
+<!--    <select id="findGreaterThanAge" parameterType="Integer" resultType="com.fc.entity.User">-->
 <!--        select * from student where age <![CDATA[>=]]> #{age}-->
 <!--    </select>-->
-<!--    <select id="findGreaterThanAge" parameterType="Integer" resultType="com.fc.entity.Student">-->
+<!--    <select id="findGreaterThanAge" parameterType="Integer" resultType="com.fc.entity.User">-->
 <!--        select * from student where age <![CDATA[>]]> #{age}-->
 <!--    </select>-->
-<!--    <select id="findGreaterThanAge" parameterType="Integer" resultType="com.fc.entity.Student">-->
+<!--    <select id="findGreaterThanAge" parameterType="Integer" resultType="com.fc.entity.User">-->
 <!--        select * from student where age <![CDATA[>=]]> #{age}-->
 <!--    </select>-->
-    <select id="findGreaterThanAge" parameterType="Integer" resultType="com.fc.entity.Student">
+    <select id="findGreaterThanAge" parameterType="Integer" resultType="com.fc.entity.User">
         select * from student where age <![CDATA[>=]]> #{age}
     </select>
 </mapper>
