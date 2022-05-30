@@ -17,6 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //token拦截器
+
 public class JwtInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
