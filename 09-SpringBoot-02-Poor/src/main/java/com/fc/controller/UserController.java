@@ -48,8 +48,8 @@ public ResultVo deleteUser(@ApiParam(name = "id",value = "用户的编号") @Req
         return userService.getList(pageNum,pageSize,info,search,id);
     }
 
-public ResultVo login(@RequestParam String username,@RequestParam String password){
+    public ResultVo login(@RequestParam String username,@RequestParam String password){
 
-return userService.login(username,password);
+    return userService.login(username,password);
 }
 }

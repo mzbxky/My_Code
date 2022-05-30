@@ -59,8 +59,8 @@
       <module fileurl="file://$PROJECT_DIR$/05-SpringMVC-14-Interceptor/05-SpringMVC-14-Interceptor.iml" filepath="$PROJECT_DIR$/05-SpringMVC-14-Interceptor/05-SpringMVC-14-Interceptor.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-SSM-01-Wyy/06-SSM-01-Wyy.iml" filepath="$PROJECT_DIR$/06-SSM-01-Wyy/06-SSM-01-Wyy.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-SSM-01-Wyy-02/06-SSM-01-Wyy-02.iml" filepath="$PROJECT_DIR$/06-SSM-01-Wyy-02/06-SSM-01-Wyy-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-SSM-02-TwoPoor/06-SSM-02-TwoPoor.iml" filepath="$PROJECT_DIR$/06-SSM-02-TwoPoor/06-SSM-02-TwoPoor.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-SSM-02-poor/06-SSM-02-poor.iml" filepath="$PROJECT_DIR$/06-SSM-02-poor/06-SSM-02-poor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/06-SSM-02-TwoPoor/06-SSM-02-poor (1).iml" filepath="$PROJECT_DIR$/06-SSM-02-TwoPoor/06-SSM-02-poor (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/07-JWT-00-Session-Cookie/07-JWT-00-Session-Cookie.iml" filepath="$PROJECT_DIR$/07-JWT-00-Session-Cookie/07-JWT-00-Session-Cookie.iml" />
       <module fileurl="file://$PROJECT_DIR$/07-JWT-01-Start/07-JWT-01-Start.iml" filepath="$PROJECT_DIR$/07-JWT-01-Start/07-JWT-01-Start.iml" />
       <module fileurl="file://$PROJECT_DIR$/07-JWT-02-Web/07-JWT-02-Web.iml" filepath="$PROJECT_DIR$/07-JWT-02-Web/07-JWT-02-Web.iml" />
@@ -91,7 +91,7 @@
       <module fileurl="file://$PROJECT_DIR$/09-SpringBoot-02-Poor/09-SpringBoot-02-Poor.iml" filepath="$PROJECT_DIR$/09-SpringBoot-02-Poor/09-SpringBoot-02-Poor.iml" />
       <module fileurl="file://$PROJECT_DIR$/09-SpringBoot-01-Diary/09-springboot-01-diary.iml" filepath="$PROJECT_DIR$/09-SpringBoot-01-Diary/09-springboot-01-diary.iml" />
       <module fileurl="file://$PROJECT_DIR$/../11-Thymeleaf-01-Java/11-Thymeleaf-01-Java.iml" filepath="$PROJECT_DIR$/../11-Thymeleaf-01-Java/11-Thymeleaf-01-Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb/_01ThirdLayerApplicationWeb.iml" filepath="$PROJECT_DIR$/_01ThirdLayerApplicationWeb/_01ThirdLayerApplicationWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/13-MyBatis-Plus-01-BaseMapper.iml" filepath="$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/13-MyBatis-Plus-01-BaseMapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dev01.iml" filepath="$PROJECT_DIR$/.idea/dev01.iml" />
     </modules>
   </component>

@@ -67,7 +67,6 @@
         <option value="$PROJECT_DIR$/03-Spring-07-DI-04-Annotation/pom.xml" />
         <option value="$PROJECT_DIR$/03-Spring-07-DI-05-Annotation/pom.xml" />
         <option value="$PROJECT_DIR$/03-Spring-08-JDBC-01-XML/pom.xml" />
-        <option value="$PROJECT_DIR$/_01ThirdLayerApplicationWeb/pom.xml" />
         <option value="$PROJECT_DIR$/03-Spring-08-JDBC-02-Annotation/pom.xml" />
         <option value="$PROJECT_DIR$/04-DesignPattern-01-Proxy/pom.xml" />
         <option value="$PROJECT_DIR$/03-DesignPattern-09-AOP-00-Start/pom.xml" />
@@ -130,7 +129,13 @@
         <option value="$PROJECT_DIR$/09-SpringBoot-01-Diary/pom.xml" />
         <option value="$PROJECT_DIR$/09-SpringBoot-02-Poor/pom.xml" />
         <option value="$PROJECT_DIR$/../11-Thymeleaf-01-Java/pom.xml" />
+        <option value="$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/09-SpringBoot-02-Poor/12-Shiro-02/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />

@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="06-SSM-02-poor (1):war exploded">
+  <artifact type="exploded-war" name="06-SSM-02-TwoPoor:war exploded">
     <output-path>$PROJECT_DIR$/06-SSM-02-TwoPoor/target/06-SSM-02-poor-1.0-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>06-SSM-02-poor (1)</module>
+        <module>06-SSM-02-TwoPoor</module>
         <packaging>war</packaging>
       </options>
     </properties>
