@@ -5,12 +5,12 @@
 <!--
 多例可以创建多个对象，每次创建对象都会执行构造方法，创建的是不同的对象
 -->
-<!--    <bean id="student" scope="prototype" class="com.fc.entity.Student"/>-->
-<!--    <bean id = "student" scope="prototype" class="com.fc.entity.Student"/>-->
-<!--    <bean id = "student" scope="prototype" class="com.fc.entity.Student"/>-->
+<!--    <bean id="student" scope="prototype" class="com.fc.entity.User"/>-->
+<!--    <bean id = "student" scope="prototype" class="com.fc.entity.User"/>-->
+<!--    <bean id = "student" scope="prototype" class="com.fc.entity.User"/>-->
 
 <!--    单例，只会创建一个对象，构造方法只会执行一次，创建的只是同一个对象-->
-<!--    <bean id = "student" scope="singleton" class="com.fc.entity.Student"/>-->
-<!--    <bean id = "student" scope="singleton" class="com.fc.entity.Student"/>-->
-    <bean id = "student" scope = "singleton" class="com.fc.entity.Student"/>
+<!--    <bean id = "student" scope="singleton" class="com.fc.entity.User"/>-->
+<!--    <bean id = "student" scope="singleton" class="com.fc.entity.User"/>-->
+    <bean id = "student" scope = "singleton" class="com.fc.entity.User"/>
 </beans>
