@@ -12,6 +12,7 @@
         <module name="07-JWT-04-CustomJwt" />
         <module name="07-JWT-01-Start" />
         <module name="08-SpringBoot-17-Junit" />
+        <module name="13-MyBatis-Plus-01-BaseMapper" />
         <module name="05-SpringMVC-01-Start" />
         <module name="02-MyBatis-00JDBC" />
         <module name="09-SpringBoot-01-Diary" />
@@ -19,7 +20,6 @@
         <module name="05-SpringMVC-07-ResponseData" />
         <module name="02-MyBatis-13-Dynamic-SQL" />
         <module name="02-MyBatis-17-Annotation" />
-        <module name="_01ThirdLayerApplicationWeb" />
         <module name="02-MyBatis-02-More-Mapper" />
         <module name="02-MyBatis-19-Generator" />
         <module name="08-SpringBoot-00-Starter" />
@@ -36,7 +36,6 @@
         <module name="08-SpringBoot-10-RESTful" />
         <module name="11-Thymeleaf-01-Java" />
         <module name="03-Spring-00-ThirdLayerApplication-01-Web" />
-        <module name="09-SpringBoot-02-Poor" />
         <module name="08-springboot-18-junit5" />
         <module name="03-Spring-09-AOP-02-Annotation" />
         <module name="08-springboot-19-mail" />
@@ -52,6 +51,7 @@
         <module name="05-SpringMVC-02-RequestMapping" />
         <module name="02-MyBatis-12-Multi-Table" />
         <module name="08-SpringBoot-15-CorssOrigin" />
+        <module name="10-MyBatis-Plus-00" />
         <module name="08-SpringBoot-14-FileUpload" />
         <module name="08-SpringBoot-19-Mail" />
         <module name="03-Spring-09-AOP-00-Start" />
@@ -73,7 +73,7 @@
         <module name="07-JWT-03-Interceptor" />
         <module name="05-SpringMVC-11-FileDownload" />
         <module name="03-Spring-06-Lazy" />
-        <module name="06-SSM-02-poor (1)" />
+        <module name="06-SSM-02-TwoPoor" />
         <module name="02-MyBatis-05-Properties" />
         <module name="03-Spring-10-Transaction-03-Annotation" />
         <module name="03-Spring-10-Transaction-04-Propagate" />
@@ -162,7 +162,7 @@
       <module name="06-SSM-01-Wyy" target="1.8" />
       <module name="06-SSM-01-Wyy-02" target="1.8" />
       <module name="06-SSM-02-poor" target="1.8" />
-      <module name="06-SSM-02-poor (1)" target="1.8" />
+      <module name="06-SSM-02-TwoPoor" target="1.8" />
       <module name="06-SSM-03-Diary" target="1.8" />
       <module name="06-SSM-TwoPoor" target="1.8" />
       <module name="07-JWT-00-Session-Cookie" target="1.8" />
@@ -203,7 +203,12 @@
       <module name="09-springboot-01-diary" target="1.8" />
       <module name="09-SpringBoot-02-Poor" target="1.8" />
       <module name="0999-observer" target="1.8" />
+      <module name="10-MyBatis-Plus-00" target="1.8" />
+      <module name="10-mybatis-plus-00" target="1.8" />
       <module name="11-Thymeleaf-01-Java" target="1.8" />
+      <module name="12-Shiro-01" target="1.8" />
+      <module name="12-Shiro-02" target="1.8" />
+      <module name="13-MyBatis-Plus-01-BaseMapper" target="1.8" />
       <module name="_01ThirdLayerApplicationWeb" target="1.8" />
       <module name="_05-SpringMVC-02-RequestMapping" target="1.8" />
       <module name="_06-SSM-01-Wyy" target="1.8" />
@@ -246,6 +251,10 @@
       <module name="09-SpringBoot-02-Poor" options="-parameters" />
       <module name="09-springboot-00-diary" options="-parameters" />
       <module name="09-springboot-01-diary" options="-parameters" />
+      <module name="10-MyBatis-Plus-00" options="-parameters" />
+      <module name="10-mybatis-plus-00" options="-parameters" />
+      <module name="12-Shiro-02" options="-parameters" />
+      <module name="13-MyBatis-Plus-01-BaseMapper" options="-parameters" />
       <module name="aaa" options="-parameters" />
     </option>
   </component>

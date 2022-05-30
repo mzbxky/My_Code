@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/../11-Thymeleaf-01-Java/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../11-Thymeleaf-01-Java/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/01_ThirdLayerApplication/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/01_ThirdLayerApplication/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/02-MyBatis-00JDBC/src/main/java" charset="UTF-8" />
@@ -159,8 +157,8 @@
     <file url="file://$PROJECT_DIR$/08-SpringBoot-21-Jasypt/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/09-SpringBoot-01-Diary/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/09-SpringBoot-02-Poor/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_01ThirdLayerApplicationWeb/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/09-SpringBoot-02-Poor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
