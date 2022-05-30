@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--    init-method的作用是，在初始化的时候，执行这个方法里的内容，destroy-method的作用是，在程序关闭时执行这个方法里的内容-->
-<!--<bean id = "student" init-method="eat" destroy-method="sleep" class="com.fc.entity.Student"/>-->
-<!--    <bean id = "student" init-method="eat" destroy-method="sleep" class="com.fc.entity.Student"/>-->
-    <bean id = "student" init-method="eat" destroy-method="sleep" class="com.fc.entity.Student"/>
+<!--<bean id = "student" init-method="eat" destroy-method="sleep" class="com.fc.entity.User"/>-->
+<!--    <bean id = "student" init-method="eat" destroy-method="sleep" class="com.fc.entity.User"/>-->
+    <bean id = "student" init-method="eat" destroy-method="sleep" class="com.fc.entity.User"/>
 </beans>
