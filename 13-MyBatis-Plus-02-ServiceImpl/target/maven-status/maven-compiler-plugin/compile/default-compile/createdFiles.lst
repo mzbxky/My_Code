@@ -1,6 +1,0 @@
-com\fc\entity\User.class
-com\fc\service\impl\UserServiceImpl.class
-com\fc\Application.class
-com\fc\dao\UserDao.class
-com\fc\ServiceImplTests.class
-com\fc\service\UserService.class
