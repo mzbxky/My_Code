@@ -128,7 +128,6 @@
         <option value="$PROJECT_DIR$/09-SpringBoot-01-Diary/pom.xml" />
         <option value="$PROJECT_DIR$/../11-Thymeleaf-01-Java/pom.xml" />
         <option value="$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/pom.xml" />
-        <option value="$PROJECT_DIR$/13-MyBatis-Plus-02-ServiceImpl/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

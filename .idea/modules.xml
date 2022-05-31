@@ -89,8 +89,7 @@
       <module fileurl="file://$PROJECT_DIR$/08-SpringBoot-06-StaticResource/08-springboot-19-mail.iml" filepath="$PROJECT_DIR$/08-SpringBoot-06-StaticResource/08-springboot-19-mail.iml" />
       <module fileurl="file://$PROJECT_DIR$/09-SpringBoot-01-Diary/09-springboot-01-diary.iml" filepath="$PROJECT_DIR$/09-SpringBoot-01-Diary/09-springboot-01-diary.iml" />
       <module fileurl="file://$PROJECT_DIR$/../11-Thymeleaf-01-Java/11-Thymeleaf-01-Java.iml" filepath="$PROJECT_DIR$/../11-Thymeleaf-01-Java/11-Thymeleaf-01-Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/13-MyBatis-Plus-01-BaseMapper.iml" filepath="$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/13-MyBatis-Plus-01-BaseMapper.iml" />
-      <module fileurl="file://$PROJECT_DIR$/13-MyBatis-Plus-02-ServiceImpl/13-mybatis-plus-02-serviceimpl.iml" filepath="$PROJECT_DIR$/13-MyBatis-Plus-02-ServiceImpl/13-mybatis-plus-02-serviceimpl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/13-mybatis-plus-01-basemapper.iml" filepath="$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/13-mybatis-plus-01-basemapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dev01.iml" filepath="$PROJECT_DIR$/.idea/dev01.iml" />
     </modules>
   </component>
