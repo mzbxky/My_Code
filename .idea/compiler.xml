@@ -45,6 +45,8 @@
         <module name="03-Spring-09-AOP-01-XML-Start" />
         <module name="05-SpringMVC-05-Date" />
         <module name="03-Spring-07-DI-05-Annotation" />
+        <module name="13-mybatis-plus-02-serviceimpl" />
+        <module name="13-MyBatis-Plus-02-ServiceImpl" />
         <module name="08-SpringBoot-01-Starter" />
         <module name="08-SpringBoot-07-JSP" />
         <module name="02-MyBatis-01-Start" />
@@ -69,7 +71,6 @@
         <module name="05-SpringMVC-08-OtherAnnotation" />
         <module name="06-SSM-01-Wyy" />
         <module name="08-SpringBoot-09-MyBatis" />
-        <module name="06-SSM-02-poor" />
         <module name="07-JWT-03-Interceptor" />
         <module name="05-SpringMVC-11-FileDownload" />
         <module name="03-Spring-06-Lazy" />
@@ -209,6 +210,8 @@
       <module name="12-Shiro-01" target="1.8" />
       <module name="12-Shiro-02" target="1.8" />
       <module name="13-MyBatis-Plus-01-BaseMapper" target="1.8" />
+      <module name="13-mybatis-plus-02-serviceimpl" target="1.8" />
+      <module name="13-MyBatis-Plus-02-ServiceImpl" target="1.8" />
       <module name="_01ThirdLayerApplicationWeb" target="1.8" />
       <module name="_05-SpringMVC-02-RequestMapping" target="1.8" />
       <module name="_06-SSM-01-Wyy" target="1.8" />
@@ -255,6 +258,8 @@
       <module name="10-mybatis-plus-00" options="-parameters" />
       <module name="12-Shiro-02" options="-parameters" />
       <module name="13-MyBatis-Plus-01-BaseMapper" options="-parameters" />
+      <module name="13-MyBatis-Plus-02-ServiceImpl" options="-parameters" />
+      <module name="13-mybatis-plus-02-serviceimpl" options="-parameters" />
       <module name="aaa" options="-parameters" />
     </option>
   </component>
