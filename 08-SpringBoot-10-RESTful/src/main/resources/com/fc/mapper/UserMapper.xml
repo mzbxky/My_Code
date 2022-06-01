@@ -5,16 +5,16 @@
 <!--映射文件，namespace命名空间：对应一个完全的全限定名，必须和对应的接口的路径相匹配-->
 <mapper namespace="com.fc.dao.UserDao">
     <cache/>
-    <select id="findAll" resultType="user">
-        select * from user
+    <select id="findAll" resultType="User">
+        select * from User
     </select>
     <insert id="add">
-        insert into user(name,age.gender) values {#{name},#{age},#{gender}}
+        insert into User(name,age.gender) values {#{name},#{age},#{gender}}
     </insert>
     <update id="update">
-        update user set name = #{name} where id = #{id}
+        update User set name = #{name} where id = #{id}
     </update>
     <delete id="delete">
-        delete from user where id = #{id}
+        delete from User where id = #{id}
     </delete>
 </mapper>
