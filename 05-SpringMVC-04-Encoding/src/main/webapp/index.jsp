@@ -5,7 +5,7 @@
     <title>测试编码集</title>
 </head>
 <body>
-<form method="post" action="/user/register">
+<form method="post" action="/User/register">
     <table align="center">
         <tr>
             <td>姓名</td>
