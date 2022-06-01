@@ -6,6 +6,6 @@
 <mapper namespace="com.fc.dao.StudentDao">
     <cache/>
     <select id="findAll" resultType="student">
-        select * from user
+        select * from User
     </select>
 </mapper>
