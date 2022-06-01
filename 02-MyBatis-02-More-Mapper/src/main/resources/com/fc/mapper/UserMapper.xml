@@ -4,14 +4,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--映射文件，namespace命名空间：对应一个完全的全限定名，必须和对应的接口的路径相匹配-->
 <mapper namespace="com.fc.dao.UserDao">
-    <select id="findAll" resultType="com.fc.entity.User">
-        select * from user
+    <select id="findAll" resultType="com.fc.entity.User
+        select * from User
     </select>
 <!--    添加信息-->
     <insert id="add">
-        insert into user(username,password)values ("徐凯玥","love")
+        insert into User(username,password)values ("徐凯玥","love")
     </insert>
 <!--    <insert id="add">-->
-<!--        insert into user (username,password)values ("肖志龙","123")-->
+<!--        insert into User (username,password)values ("肖志龙","123")-->
 <!--    </insert>-->
 </mapper>
