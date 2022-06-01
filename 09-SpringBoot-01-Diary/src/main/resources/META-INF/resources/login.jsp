@@ -24,9 +24,9 @@
         <div class="loginbar">用户登录</div>
         <div id="tabcon">
             <div class="box show">
-                <form action="/user/login" method="post" id="loginForm">
+                <form action="/User/login" method="post" id="loginForm">
                     <%-- actionName表示用户行为，通过这个参数可以在UserServlet中判断用户当前想要操作的功能 --%>
-                    <input type="text" class="user yahei16" id="username" name="username" value="${resultInfo.data.username}" /><br /><br />
+                    <input type="text" class="User yahei16" id="username" name="username" value="${resultInfo.data.username}" /><br /><br />
                     <input type="password" class="pwd yahei16" id="password" name="password" value="${resultInfo.data.password}" /><br /><br />
                     <input name="remember" type="checkbox" value="1"  class="inputcheckbox"/> <label>记住我</label>&nbsp; &nbsp;
                     <span id="msg" style="color: red;font-size: 12px;">${resultInfo.message}</span><br /><br />
