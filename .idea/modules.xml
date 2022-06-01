@@ -90,6 +90,7 @@
       <module fileurl="file://$PROJECT_DIR$/09-SpringBoot-01-Diary/09-springboot-01-diary.iml" filepath="$PROJECT_DIR$/09-SpringBoot-01-Diary/09-springboot-01-diary.iml" />
       <module fileurl="file://$PROJECT_DIR$/../11-Thymeleaf-01-Java/11-Thymeleaf-01-Java.iml" filepath="$PROJECT_DIR$/../11-Thymeleaf-01-Java/11-Thymeleaf-01-Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/13-MyBatis-Plus-02-ServiceImpl/13-MyBatis-Plus-02-ServiceImpl.iml" filepath="$PROJECT_DIR$/13-MyBatis-Plus-02-ServiceImpl/13-MyBatis-Plus-02-ServiceImpl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/13-MyBatis-Plus-03-Annotation/13-MyBatis-Plus-03-Annotation.iml" filepath="$PROJECT_DIR$/13-MyBatis-Plus-03-Annotation/13-MyBatis-Plus-03-Annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/13-mybatis-plus-01-basemapper.iml" filepath="$PROJECT_DIR$/13-MyBatis-Plus-01-BaseMapper/13-mybatis-plus-01-basemapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dev01.iml" filepath="$PROJECT_DIR$/.idea/dev01.iml" />
     </modules>
