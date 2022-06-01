@@ -10,15 +10,15 @@
                         表单类型  enctype="multipart/form-data"
                         提交方式  method="post"
                     --%>
-                    <form class="form-horizontal" method="post" action="/user/update" enctype="multipart/form-data">
+                    <form class="form-horizontal" method="post" action="/User/update" enctype="multipart/form-data">
                         <%--隐藏id属性框--%>
-                        <input type="hidden" name="id" id="id" value="${user.id}">
+                        <input type="hidden" name="id" id="id" value="${User.id}">
 
                         <div class="form-group">
                             <label for="nickname" class="col-sm-2 control-label">昵称:</label>
                             <div class="col-sm-3">
                                 <input class="form-control" name="nick" id="nickname" placeholder="昵称"
-                                       value="${user.nick}">
+                                       value="${User.nick}">
                             </div>
                             <label for="img" class="col-sm-2 control-label">头像:</label>
                             <div class="col-sm-5">
@@ -28,7 +28,7 @@
                         <div class="form-group">
                             <label for="mood" class="col-sm-2 control-label">心情:</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" name="mood" id="mood" rows="3">${user.mood}</textarea>
+                                <textarea class="form-control" name="mood" id="mood" rows="3">${User.mood}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="userimg">
-                        <img src="/upload/${user.head}">
+                        <img src="/upload/${User.head}">
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
         }
         // 3. 判断昵称是否做了修改
         // 从session作用域中获取用户昵称
-        var nick = '${user.nick}';
+        var nick = '${User.nick}';
         // 如果用户昵称与session中的昵称一致，则return
         if (nickname === nick) {
             return;
@@ -91,7 +91,7 @@
         // 发送ajax请求后台，验证昵称是否可用
         $.ajax({
             type: "get",
-            url: "/user/checkNick",
+            url: "/User/checkNick",
             data: {
                 nick: nickname
             },
