@@ -10,16 +10,16 @@
 
     <!--声明类型别名-->
 <!--    <typeAliases>-->
-<!--        <typeAlias type="com.fc.entity.User" alias="Student"/>-->
+<!--        <typeAlias type="com.fc.entity.Useralias="Student"/>-->
 <!--    </typeAliases>-->
 <!--        <typeAliases>-->
-<!--            <typeAlias type="com.fc.entity.User" alias="Student"/>-->
+<!--            <typeAlias type="com.fc.entity.Useralias="Student"/>-->
 <!--        </typeAliases>-->
 <!--    <typeAliases>-->
-<!--        <typeAlias type="com.fc.entity.User" alias="Student"/>-->
+<!--        <typeAlias type="com.fc.entity.Useralias="Student"/>-->
 <!--    </typeAliases>-->
     <typeAliases>
-        <typeAlias type="com.fc.entity.User" alias = "Student"/>
+        <typeAlias type="com.fc.entity.Useralias = "Student"/>
     </typeAliases>
     <!--mybatis运行环境配置-->
     <environments default="development">
