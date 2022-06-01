@@ -45,7 +45,7 @@ function register(){
 
     var json = {"name":name,"age":age,"gender":gender,"birthday":birthday};
     $.ajax({
-        url: "/user/registerJson",
+        url: "/User/registerJson",
         type: "post",
         contentType: "application/json; charset=UTF-8",
         data: JSON.stringify(json),
