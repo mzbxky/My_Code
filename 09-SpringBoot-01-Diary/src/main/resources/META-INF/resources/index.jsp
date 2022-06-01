@@ -55,8 +55,8 @@
                         <c:if test="${menu_page=='type'}">class="active"</c:if> ><a href="/type/list"><i
                         class="glyphicon glyphicon-list"></i>&nbsp;类别管理</a></li>
                 <li
-                        <c:if test="${menu_page=='user'}">class="active"</c:if> ><a href="/user/userCenter"><i
-                        class="glyphicon glyphicon-user"></i>&nbsp;个人中心</a>
+                        <c:if test="${menu_page=='User'}">class="active"</c:if> ><a href="/User/userCenter"><i
+                        class="glyphicon glyphicon-User"></i>&nbsp;个人中心</a>
                 <li
                         <c:if test="${menu_page=='report'}">class="active"</c:if> ><a href="/report/info"><i
                         class="glyphicon glyphicon-signal"></i>&nbsp;数据报表</a></li>
@@ -75,13 +75,13 @@
     <div class="row-fluid">
         <div class="col-md-3">
             <div class="data_list">
-                <div class="data_list_title"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心&nbsp;&nbsp;&nbsp;&nbsp;<a
-                        href="/user/logout">退出</a></div>
+                <div class="data_list_title"><span class="glyphicon glyphicon-User"></span>&nbsp;个人中心&nbsp;&nbsp;&nbsp;&nbsp;<a
+                        href="/User/logout">退出</a></div>
                 <div class="userimg">
-                    <img src="/upload/${user.head}">
+                    <img src="/upload/${User.head}">
                 </div>
-                <div class="nick">${user.nick}</div>
-                <div class="mood">(${user.mood})</div>
+                <div class="nick">${User.nick}</div>
+                <div class="mood">(${User.mood})</div>
             </div>
             <div class="data_list">
                 <div class="data_list_title">
@@ -122,7 +122,7 @@
     <%-- 云记列表 --%>
     <%--<jsp:include page="note/list.jsp"></jsp:include>--%>
     <%-- 个人中心 --%>
-    <%--<jsp:include page="user/info.jsp"></jsp:include>--%>
+    <%--<jsp:include page="User/info.jsp"></jsp:include>--%>
     <%-- 类型列表 --%>
     <%--<jsp:include page="type/list.jsp"></jsp:include>--%>
 
