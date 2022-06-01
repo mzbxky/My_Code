@@ -20,7 +20,7 @@
         } else {
             $.ajax({
                 type: "post",
-                url: "/user/verifyToken",
+                url: "/User/verifyToken",
                 headers: {"token": token},
                 success: function (resp) {
                     if (resp.success) {
