@@ -4,7 +4,7 @@
     <title>测试List和Map</title>
 </head>
 <body>
-<form method="post" action="/user/getListAndMap">
+<form method="post" action="/User/getListAndMap">
     <table align="center">
         <caption><h1>注册</h1></caption>
 
