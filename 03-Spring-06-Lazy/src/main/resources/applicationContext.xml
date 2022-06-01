@@ -3,5 +3,5 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--    程序运行时，懒加载初始化在开启时，如果不创建对象，就不会执行构造方法-->
-<bean id="student" lazy-init="true" scope="prototype" class="com.fc.entity.User"/>
+<bean id="student" lazy-init="true" scope="prototype" class="com.fc.entity.User>
 </beans>
