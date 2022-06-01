@@ -5,7 +5,7 @@
     <title>测试日期格式</title>
 </head>
 <body>
-<form action="/user/getDate">
+<form action="/User/getDate">
     <table align="center">
         <tr>
             <td>生日</td>
