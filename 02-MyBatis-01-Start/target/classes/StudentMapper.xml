@@ -8,7 +8,7 @@
     <!--这是一个select语句的标签，id必须和对应接口中的方法名完全相同，但是必须唯一。resultType对应返回值的类型，也就是orm映射的O
     ，必须使用完全的全限定名-->
 
-    <select id="selectOne" resultType="com.fc.entity.User">
+    <select id="selectOne" resultType="com.fc.entity.User
         select * from student where id = 1
     </select>
 
@@ -18,7 +18,7 @@
     </insert>
 
     <!--通过id查询学生对应的SQL语句-->
-    <select id="findById" resultType="com.fc.entity.User" parameterType="Integer">
+    <select id="findById" resultType="com.fc.entity.UserparameterType="Integer">
         select * from student where id = #{id}
     </select>
 </mapper>
