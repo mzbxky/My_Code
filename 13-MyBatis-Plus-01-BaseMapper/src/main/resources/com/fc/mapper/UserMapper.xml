@@ -4,6 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fc.dao.UserDao">
     <select id="selectByDesc" resultType="User">
-        select * from user order by age desc
+        select * from User order by age desc
     </select>
 </mapper>
