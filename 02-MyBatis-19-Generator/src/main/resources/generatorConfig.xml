@@ -47,7 +47,7 @@
         <!-- 指定数据库表 -->
         <table schema="" tableName="t_account"/>
         <table schema="" tableName="student"/>
-        <table schema="" tableName="user"/>
+        <table schema="" tableName="User"/>
         <table schema="" tableName="department"/>
         <!-- 有些表的字段需要指定java类型-->
         <!--<table schema="" tableName="">-->
